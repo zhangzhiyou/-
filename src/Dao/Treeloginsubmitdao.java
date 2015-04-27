@@ -35,20 +35,30 @@ public class Treeloginsubmitdao {
             e.printStackTrace();
         }
     }
+
+    public static void delect1(Integer id) throws Exception {
+        Connection conn=null;
+        PreparedStatement stmt=null;
+        conn=Link.getCon();
+        String sql="delete from lvtable where id="+id;
+        stmt=conn.prepareStatement(sql);
+        stmt.executeUpdate();
+    }
+
     public static String show2()throws SQLException{
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
         String str =  "<table  border=\"1\" bordercolor=\"black\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\">" +
-                "<tr><th>姓名</th><th>学号</th><th>理由</th><th>教室</th></tr>";
+                "<tr><th>id</th><th>姓名</th><th>学号</th><th>理由</th><th>教室</th></tr>";
         try {
             con = Link.getCon();
             stmt =  con.createStatement();
-            String sql = "select username,number1,reason,classnumber from threetable";
+            String sql = "select id, username,number1,reason,classnumber from threetable";
             rs=stmt.executeQuery(sql);
             while (rs.next()){
-                str = str+"<tr><th>"+rs.getString(1)+"</th><th>"+rs.getString(2)+"</th><th>"+rs.getString(3)+"</th><th>"+rs.getInt(4)+
-                "</th></tr>";
+                str = str+"<tr><th>"+rs.getInt(1)+"</th><th>"+rs.getString(2)+"</th><th>"+rs.getString(3)+"</th><th>"+rs.getString(4)+
+                "</th><th>"+rs.getInt(5)+"</th></tr>";
             }
             str +="</table>";
         } catch (Exception e) {

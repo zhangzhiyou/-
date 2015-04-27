@@ -43,6 +43,12 @@
                 </tr>
                 <tr>
                     <td width="40%"></td>
+                    <td width="5%">id：</td>
+                    <td><input type="text" name="id1"></td>
+                    <td width="30%"></td>
+                </tr>
+                <tr>
+                    <td width="40%"></td>
                     <td width="5%"><input type="submit" value="确定"></td>
                     <td width="30%"></td>
                 </tr>

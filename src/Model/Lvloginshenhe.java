@@ -25,9 +25,11 @@ public class Lvloginshenhe extends HttpServlet {
         String name4 = request.getParameter("name1");
         String number4 = request.getParameter("number1");
         String agree4 = request.getParameter("agree");
-
+        String id=request.getParameter("id1");
+        Integer id4=Integer.valueOf(id);
             try{
                 Lvloginshenhedao.inster1(name4,number4,agree4);
+                Lvloginshenhedao.delect(id4);
                 request.getRequestDispatcher("Lvloginout.jsp").forward(request,response);
             }catch (Exception e){
                 e.printStackTrace();

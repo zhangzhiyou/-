@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by zhiyou on 15-4-25.
+ * Created by zhiyou on 15-4-27.
  */
-@WebServlet(urlPatterns = "/loging4", name = "Login4")
-public class Threeloginsubmit extends HttpServlet {
+@WebServlet(urlPatterns = "/loging5", name = "Login5")
+public class Threelogindelecte extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -22,19 +22,12 @@ public class Threeloginsubmit extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF8");
-        String name3 = request.getParameter("name2");
-        String number3 = request.getParameter("number2");
-        String reason = request.getParameter("reason");
-        String classroom = request.getParameter("classroom");
-        Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
-
-        try{
-            Treeloginsubmitdao.inster2(name3,number3,reason,classnumber);
-
-            request.getRequestDispatcher("Threeloginout.jsp").forward(request,response);
-
-
-        }catch (Exception e){
+        String id=request.getParameter("id");
+        Integer id4=Integer.valueOf(id);
+        try {
+            Treeloginsubmitdao.delect1(id4);
+            request.getRequestDispatcher("threedelete.jsp").forward(request,response);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

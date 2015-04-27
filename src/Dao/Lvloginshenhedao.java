@@ -38,21 +38,29 @@ public class Lvloginshenhedao  {
 
         }
     }
+    public static void delect(Integer id) throws Exception {
+        Connection conn=null;
+        PreparedStatement stmt=null;
+        conn=Link.getCon();
+        String sql="delete from threetable where id="+id;
+        stmt=conn.prepareStatement(sql);
+        stmt.executeUpdate();
+    }
     public static String show1() throws SQLException{
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
         String sql;
         String str = "<table  border=\"1\" bordercolor=\"black\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\">" +
-                "<tr><th>姓名</th><th>学号</th><th>审核</th></tr>";
+                "<tr><th>id</th><th>姓名</th><th>学号</th><th>审核</th></tr>";
         try{
 
             con = Link.getCon();
             stmt =  con.createStatement();
-            sql = "select username,number,agree from lvtable";
+            sql = "select id, username,number,agree from lvtable";
             rs=stmt.executeQuery(sql);
             while (rs.next()){
-                str = str+"<tr><th>"+rs.getString(1)+"</th><th>"+rs.getString(2)+"</th><th>"+rs.getString(3)+"</th></tr>";
+                str = str+"<tr><th>"+rs.getInt(1)+"</th><th>"+rs.getString(2)+"</th><th>"+rs.getString(3)+"</th><th>"+rs.getString(4)+"</th></tr>";
             }
             str += "</table>";
         }catch (SQLException e){

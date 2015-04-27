@@ -60,6 +60,7 @@
       <tr>
         <td width="40%"></td>
         <td width="5%"><input type="submit" value="确认"></td>
+        <td width="5%"><a href="threedelete.jsp">选择要删除的名单</a></td>
         <td width="30%"></td>
       </tr>
     </table>
