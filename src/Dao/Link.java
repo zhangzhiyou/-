@@ -9,7 +9,7 @@ public class Link {
   static   String url = "jdbc:mysql://localhost:3306/classes?"
             + "user=root&password=zhiyou&useUnicode=true&characterEncoding=UTF8";
 
- static    private String jdbcName="com.mysql.jdbc.Driver";
+// static    private String jdbcName="com.mysql.jdbc.Driver";
 
     /**
      * 获取数据库连接
@@ -18,8 +18,9 @@ public class Link {
      */
     public static Connection getCon() throws Exception{
 
-        Class.forName(jdbcName);
-        Connection con= DriverManager.getConnection(url);
+       // Class.forName(jdbcName);
+        Class.forName("com.mysql.jdbc.Driver");//注册驱动
+        Connection con= DriverManager.getConnection(url);//建立链接
 
         return con;
     }
@@ -36,6 +37,8 @@ public class Link {
     }
 
     public static void main(String[] args) {
+
+
        Link link = new Link();
         try {
             link.getCon();

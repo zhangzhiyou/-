@@ -22,10 +22,11 @@ public class Threelogindelecte extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF8");
-        String id=request.getParameter("id");
-        Integer id4=Integer.valueOf(id);
+        String classroom=request.getParameter("classrooml1");
+        String agree = request.getParameter("agree1");
+        String applytime= request.getParameter("applytimel1");
         try {
-            Treeloginsubmitdao.delect1(id4);
+            Treeloginsubmitdao.delect1(agree,classroom,applytime);
             request.getRequestDispatcher("threedelete.jsp").forward(request,response);
         } catch (Exception e) {
             e.printStackTrace();

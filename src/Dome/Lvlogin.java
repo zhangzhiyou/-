@@ -8,6 +8,9 @@ public class Lvlogin {
     private String name1;
     private String number1;
     private String agree;
+    private String classrooml;
+    private String applytimel;
+
 
     public Integer getId() {
         return id;
@@ -39,5 +42,21 @@ public class Lvlogin {
 
     public void setAgree(String agree) {
         this.agree = agree;
+    }
+
+    public String getClassrooml() {
+        return classrooml;
+    }
+
+    public void setClassrooml(String classrooml) {
+        this.classrooml = classrooml;
+    }
+
+    public String getApplytimel() {
+        return applytimel;
+    }
+
+    public void setApplytimel(String applytimel) {
+        this.applytimel = applytimel;
     }
 }

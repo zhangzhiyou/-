@@ -26,10 +26,9 @@
 
 <body>
 <div align="center" style="padding-top: 50px">
-
   <form action="loging4" method="post">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
-         style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
+         style='position: absolute;left:0px;top:0px;z-index: -1'/>
     <%=Lvloginshenhedao.show1()%>
     <table>
       <tr>
@@ -44,27 +43,39 @@
         <td><input type="text" name="number2"></td>
         <td width="30%"></td>
       </tr>
-
       <tr>
         <td width="40%"></td>
-        <td width="5%">教室：</td>
+        <td width="5%">
+        <font color="#a52a2a">  教室：</font>
+        </td>
         <td><input type="text" name="classroom"></td>
         <td width="30%"></td>
       </tr>
       <tr>
         <td width="40%"></td>
-        <td width="5%">理由：</td>
+        <td width="10%">
+          <font color="#a52a2a"> 申请时间：</font>
+        </td>
+        <td><input type="text" name="applytimet"></td>
+        <td width="30%"></td>
+      </tr>
+      <tr>
+        <td width="40%"></td>
+        <td width="5%">
+        <font color="#ff3dda">  理由：</font>
+        </td>
         <td><textarea name="reason" style="width:200px;height:80px;"></textarea></td>
         <td width="30%"></td>
       </tr>
       <tr>
         <td width="40%"></td>
-        <td width="5%"><input type="submit" value="确认"></td>
-        <td width="5%"><a href="threedelete.jsp">选择要删除的名单</a></td>
+        <td><input type="submit" value="确认"></td>
+        <td ><a href="Threeloginout.jsp">重置</a></td>
+        <td><a href="threedelete.jsp">选择要删除的名单</a></td>
         <td width="30%"></td>
       </tr>
     </table>
   </form>
 </div>
-</body >
+</body>
 </html>

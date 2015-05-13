@@ -9,6 +9,7 @@ public class Threelogin {
     private String number2;
     private String reason;
     private Integer classroom;
+    private String applytimet;
 
 
 
@@ -51,5 +52,13 @@ public class Threelogin {
 
     public void setClassroom(Integer classroom) {
         this.classroom = classroom;
+    }
+
+    public String getApplytimet() {
+        return applytimet;
+    }
+
+    public void setApplytimet(String applytimet) {
+        this.applytimet = applytimet;
     }
 }

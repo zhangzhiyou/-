@@ -28,13 +28,26 @@
 
       <tr height="10">
         <td width="40%"></td>
-        <td width="10%">id：</td>
-        <td><input type="text"  name="id"></td>
+        <td width="10%">审核：</td>
+        <td><input type="text"  name="agree1"></td>
+        <td width="30%"></td>
+      </tr>
+      <tr height="10">
+        <td width="40%"></td>
+        <td width="10%">教室：</td>
+        <td><input type="text"  name="classrooml1"></td>
+        <td width="30%"></td>
+      </tr>
+      <tr height="10">
+        <td width="40%"></td>
+        <td width="10%">审核时间：</td>
+        <td><input type="text"  name="applytimel1"></td>
         <td width="30%"></td>
       </tr>
       <tr>
         <td width="40%"></td>
         <td width="5%"><input type="submit" value="确定"></td>
+        <td><a href="Threeloginout.jsp">返回</a></td>
         <td width="30%"></td>
       </tr>
       </table>

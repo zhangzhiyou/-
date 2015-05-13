@@ -25,12 +25,47 @@ public class Lvloginshenhe extends HttpServlet {
         String name4 = request.getParameter("name1");
         String number4 = request.getParameter("number1");
         String agree4 = request.getParameter("agree");
+        /**
+         * 增加选择判断的条件
+         */
+
+        String classroom4 = request.getParameter("classrooml");
+        String applytime4 = request.getParameter("applytimel");
+
+
         String id=request.getParameter("id1");
         Integer id4=Integer.valueOf(id);
             try{
-                Lvloginshenhedao.inster1(name4,number4,agree4);
-                Lvloginshenhedao.delect(id4);
-                request.getRequestDispatcher("Lvloginout.jsp").forward(request,response);
+                if("同意".equals(agree4)){
+                    System.out.println(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)+"==========");
+                   if(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)>0){
+                       request.setAttribute("error","该教室在该时间已被占用");
+                       request.getRequestDispatcher("Lvloginout.jsp").forward(request,response);
+                       return;
+                   }
+                    else {
+                       Lvloginshenhedao.inster1(name4, number4, agree4,classroom4,applytime4);
+                       Lvloginshenhedao.delect(id4);
+                       request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+                   }
+                }
+                else {
+                    Lvloginshenhedao.inster1(name4, number4, agree4,classroom4,applytime4);
+                    Lvloginshenhedao.delect(id4);
+                    request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+                }
+
+
+
+
+
+
+//                Lvloginshenhedao.inster1(name4, number4, agree4);
+//                Lvloginshenhedao.delect(id4);
+//                request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+
+
+
             }catch (Exception e){
                 e.printStackTrace();
             }

@@ -39,7 +39,7 @@
       <tr>
         <td width="40%"></td>
         <td width="10%"><input type="submit" value="登入"></td>
-        <td><input type="button" value="重置" onclick="resetValue()"></td>
+        <td><a href="Threelogin.jsp">重置</a></td>
         <td width="30%"></td>
       </tr>
       <tr>

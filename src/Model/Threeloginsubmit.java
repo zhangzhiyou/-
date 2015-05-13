@@ -26,10 +26,11 @@ public class Threeloginsubmit extends HttpServlet {
         String number3 = request.getParameter("number2");
         String reason = request.getParameter("reason");
         String classroom = request.getParameter("classroom");
+        String applytime = request.getParameter("applytimet");
         Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
 
         try{
-            Treeloginsubmitdao.inster2(name3,number3,reason,classnumber);
+            Treeloginsubmitdao.inster2(name3,number3,reason,classnumber,applytime);
 
             request.getRequestDispatcher("Threeloginout.jsp").forward(request,response);
 

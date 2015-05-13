@@ -40,8 +40,9 @@ public class Lvlogintext extends HttpServlet {
         Lvlo lv=new Lvlo(username1,password1);
         Connection con=null;
         try{
-            con =link.getCon();//链接服务器
+            con =link.getCon();//链接数据库
             Lvlo currentUser = lvlogindao.login1(con, lv);
+
 
             if(currentUser==null){
                 request.setAttribute("error","用户名或密码错误");

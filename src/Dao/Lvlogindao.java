@@ -19,12 +19,10 @@ public class Lvlogindao {
             pstmt =con.prepareStatement(sql);
             pstmt.setString(1,lv.getUsername1());
             pstmt.setString(2,lv.getPassword1());
-            ResultSet rs = pstmt.executeQuery();
+            ResultSet rs = pstmt.executeQuery();//pstmt.executeQuery()执行的结果
             if(rs.next()){
                 resultLvlo = new Lvlo();
                 //todo
-
-
                 resultLvlo.setUsername1(rs.getString("name2"));
                 resultLvlo.setPassword1(rs.getString("password2"));
             }

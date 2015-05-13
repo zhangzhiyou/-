@@ -9,7 +9,7 @@ import java.sql.*;
  * Created by zhiyou on 15-4-26.
  */
 public class Treeloginsubmitdao {
-    public static void inster2(String name2,String number2,String reason,Integer classroom){
+    public static void inster2(String name2,String number2,String reason,Integer classroom,String applytime1){
         Connection con= null;
         PreparedStatement stmt = null;
         Threelogin threelogin = new Threelogin();
@@ -21,13 +21,15 @@ public class Treeloginsubmitdao {
             threelogin.setNumber2(number2);
             threelogin.setReason(reason);
             threelogin.setClassroom(classroom);
+            threelogin.setApplytimet(applytime1);
             con = Link.getCon();
-            String sql = "insert into threetable(username,number1,reason,classnumber) values(?,?,?,?);";
+            String sql = "insert into threetable(username,number1,reason,classnumber,applytime1) values(?,?,?,?,?);";
             stmt=con.prepareStatement(sql);
             stmt.setString(1,threelogin.getName2());
             stmt.setString(2,threelogin.getNumber2());
             stmt.setString(3,threelogin.getReason());
             stmt.setInt(4,threelogin.getClassroom());
+            stmt.setString(5,threelogin.getApplytimet());
             stmt.executeUpdate();
         }catch (SQLDataException e){
             e.printStackTrace();
@@ -36,11 +38,11 @@ public class Treeloginsubmitdao {
         }
     }
 
-    public static void delect1(Integer id) throws Exception {
+    public static void delect1(String agree,String classroom,String applytime) throws Exception {
         Connection conn=null;
         PreparedStatement stmt=null;
         conn=Link.getCon();
-        String sql="delete from lvtable where id="+id;
+        String sql="delete from lvtable where agree='"+agree+"'and "+"classroom='"+classroom+"'and "+" applytime='"+applytime+"';";
         stmt=conn.prepareStatement(sql);
         stmt.executeUpdate();
     }
@@ -50,15 +52,15 @@ public class Treeloginsubmitdao {
         Statement stmt = null;
         ResultSet rs = null;
         String str =  "<table  border=\"1\" bordercolor=\"black\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\">" +
-                "<tr><th>id</th><th>姓名</th><th>学号</th><th>理由</th><th>教室</th></tr>";
+                "<tr><th>姓名</th><th>学号</th><th>理由</th><th>教室</th><th>申请时间</th></tr>";
         try {
             con = Link.getCon();
             stmt =  con.createStatement();
-            String sql = "select id, username,number1,reason,classnumber from threetable";
+            String sql = "select username,number1,reason,classnumber,applytime1 from threetable";
             rs=stmt.executeQuery(sql);
             while (rs.next()){
-                str = str+"<tr><th>"+rs.getInt(1)+"</th><th>"+rs.getString(2)+"</th><th>"+rs.getString(3)+"</th><th>"+rs.getString(4)+
-                "</th><th>"+rs.getInt(5)+"</th></tr>";
+                str = str+"<tr><th>"+rs.getString(1)+"</th><th>"+rs.getString(2)+"</th><th>"+rs.getString(3)+
+                "</th><th>"+rs.getInt(4)+"</th><th>"+rs.getString(5)+"</th></tr>";
             }
             str +="</table>";
         } catch (Exception e) {
