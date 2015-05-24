@@ -15,20 +15,29 @@
         //   imgEle.src ="/verfi?a="+new Date().getTime();
         imgEle.src="/verfi?a="+new Date().getTime();
       }
+
     </script>
+    <style type="text/css">
+    div{
+     border-top: 1px dashed blue;
+      border-right:1px dotted #2b42ff;
+      border-left:1px solid #ff0000;
+      border-bottom: 1px solid chartreuse ;
+    }
+    </style>
   </head>
   <body>
   <form id="form" method="post" action="loging">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
+    <div align="center">
     <tr>
       <td>
-        <div align="center">
           <table width=300 height=400 border="1" bordercolor="#ff00ff" cellspacing="0" cellpadding="0">
             <tr>
               <td align="center" valign="middle">
                 <font color="#7fff00">请选择登录方式:</font>
-              </td>
+             </td>
             <tr>
               <td>
                 <font color="#FF0000">1.吕老师登录。</font>
@@ -49,9 +58,10 @@
               </td>
             </tr>
           </table>
-        </div>
+
       </td>
     </tr>
+    </div>
   </form>
   </body>
 </html>

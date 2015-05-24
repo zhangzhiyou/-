@@ -17,30 +17,38 @@
       imgEle.src="/verfi?a="+new Date().getTime();
     }
   </script>
+  <style>
+    th{background-color: deepskyblue;color: black}
+    table#table1{background-color: bisque;color: black ;width: 500px;}
+  </style>
 </head>
 <body>
 <div align="center" style="padding-top: 50px;">
   <form action="loging5" method="post">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
-    <%=Lvloginshenhedao.show1()%>
-    <table>
-
+    <%=Lvloginshenhedao.show1()%><br/>
+    <table id="table1">
       <tr height="10">
         <td width="40%"></td>
-        <td width="10%">审核：</td>
-        <td><input type="text"  name="agree1"></td>
+        <td width="20%">
+          <font color="yellow">审核</font>：</td>
+        <td><label>同意</label><input type="radio" value="同意" name="agree1">
+        <label>不同意</label><input type="radio" value="不同意" name="agree1">
+        </td>
         <td width="30%"></td>
       </tr>
       <tr height="10">
         <td width="40%"></td>
-        <td width="10%">教室：</td>
+        <td width="20%">
+          <font color="lime">教室</font>:</td>
         <td><input type="text"  name="classrooml1"></td>
         <td width="30%"></td>
       </tr>
       <tr height="10">
         <td width="40%"></td>
-        <td width="10%">审核时间：</td>
+        <td width="25%">
+          <font color="red">审请时间</font>：</td>
         <td><input type="text"  name="applytimel1"></td>
         <td width="30%"></td>
       </tr>

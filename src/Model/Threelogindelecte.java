@@ -26,6 +26,7 @@ public class Threelogindelecte extends HttpServlet {
         String agree = request.getParameter("agree1");
         String applytime= request.getParameter("applytimel1");
         try {
+
             Treeloginsubmitdao.delect1(agree,classroom,applytime);
             request.getRequestDispatcher("threedelete.jsp").forward(request,response);
         } catch (Exception e) {

@@ -22,6 +22,9 @@
       imgEle.src="/verfi?a="+new Date().getTime();
     }
   </script>
+  <style>
+    th{background-color: deepskyblue;color: black}
+  </style>
 </head>
 
 <body>
@@ -37,12 +40,12 @@
         <td><input type="text"  name="name2"></td>
         <td width="30%"></td>
       </tr>
-      <tr>
-        <td width="40%"></td>
-        <td width="5%">学号：</td>
-        <td><input type="text" name="number2"></td>
-        <td width="30%"></td>
-      </tr>
+      <%--<tr>--%>
+        <%--<td width="40%"></td>--%>
+        <%--<td width="5%">学号：</td>--%>
+        <%--<td><input type="text" name="number2"></td>--%>
+        <%--<td width="30%"></td>--%>
+      <%--</tr>--%>
       <tr>
         <td width="40%"></td>
         <td width="5%">

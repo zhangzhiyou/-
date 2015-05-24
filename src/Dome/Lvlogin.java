@@ -10,7 +10,15 @@ public class Lvlogin {
     private String agree;
     private String classrooml;
     private String applytimel;
+    private String checked;
 
+    public String getChecked() {
+        return checked;
+    }
+
+    public void setChecked(String checked) {
+        this.checked = checked;
+    }
 
     public Integer getId() {
         return id;

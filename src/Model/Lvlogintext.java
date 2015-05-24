@@ -6,11 +6,9 @@ import Dome.Lvlo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 
 /**
@@ -29,12 +27,33 @@ public class Lvlogintext extends HttpServlet {
         Link link = new Link();
         String username1 = request.getParameter("username1");
         String password1 = request.getParameter("password1");
+        String checked = request.getParameter("usercheck");
         request.setAttribute("username1",username1);
         request.setAttribute("password1",password1);
         if (username1.isEmpty() || password1.isEmpty()) {
             request.setAttribute("error", "用户名或密码为空");
             request.getRequestDispatcher("Lvlogin.jsp").forward(request, response);//
             return;
+        }
+        if (checked != null && checked.length() > 0) {
+            String username = URLEncoder.encode(username1, "utf-8");
+            String password = URLEncoder.encode(password1, "utf-8");
+            Cookie usernamecookie = new Cookie("username", username);//创建两个cookie
+            Cookie passwordcookie = new Cookie("password", password);
+            usernamecookie.setMaxAge(30 * 24 * 60 * 60);
+            passwordcookie.setMaxAge(30 * 24 * 60 * 60);
+            response.addCookie(usernamecookie);
+            response.addCookie(passwordcookie);
+        } else {
+            Cookie[] cookies = request.getCookies();
+            if (cookies != null && cookies.length > 0) {
+                for (Cookie c : cookies) {
+                    if (c.getName().equals("username") || c.getName().equals("password")) {
+                        c.setMaxAge(0);
+                        response.addCookie(c);
+                    }
+                }
+            }
         }
 
         Lvlo lv=new Lvlo(username1,password1);

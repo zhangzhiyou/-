@@ -23,7 +23,7 @@ public class Lvloginshenhe extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF8");
         String name4 = request.getParameter("name1");
-        String number4 = request.getParameter("number1");
+      //  String number4 = request.getParameter("number1");
         String agree4 = request.getParameter("agree");
         /**
          * 增加选择判断的条件
@@ -32,9 +32,6 @@ public class Lvloginshenhe extends HttpServlet {
         String classroom4 = request.getParameter("classrooml");
         String applytime4 = request.getParameter("applytimel");
 
-
-        String id=request.getParameter("id1");
-        Integer id4=Integer.valueOf(id);
             try{
                 if("同意".equals(agree4)){
                     System.out.println(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)+"==========");
@@ -44,21 +41,17 @@ public class Lvloginshenhe extends HttpServlet {
                        return;
                    }
                     else {
-                       Lvloginshenhedao.inster1(name4, number4, agree4,classroom4,applytime4);
-                       Lvloginshenhedao.delect(id4);
+                       Lvloginshenhedao.inster1(name4, agree4,classroom4,applytime4);
+
+                       Lvloginshenhedao.delect(name4,classroom4,applytime4);//todo
                        request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
                    }
                 }
                 else {
-                    Lvloginshenhedao.inster1(name4, number4, agree4,classroom4,applytime4);
-                    Lvloginshenhedao.delect(id4);
+                    Lvloginshenhedao.inster1(name4, agree4,classroom4,applytime4);
+                    Lvloginshenhedao.delect(name4,classroom4,applytime4);//todo
                     request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
                 }
-
-
-
-
-
 
 //                Lvloginshenhedao.inster1(name4, number4, agree4);
 //                Lvloginshenhedao.delect(id4);

@@ -23,14 +23,14 @@ public class Threeloginsubmit extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF8");
         String name3 = request.getParameter("name2");
-        String number3 = request.getParameter("number2");
+      //  String number3 = request.getParameter("number2");
         String reason = request.getParameter("reason");
         String classroom = request.getParameter("classroom");
         String applytime = request.getParameter("applytimet");
         Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
 
         try{
-            Treeloginsubmitdao.inster2(name3,number3,reason,classnumber,applytime);
+            Treeloginsubmitdao.inster2(name3,reason,classnumber,applytime);
 
             request.getRequestDispatcher("Threeloginout.jsp").forward(request,response);
 
