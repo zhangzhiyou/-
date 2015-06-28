@@ -62,8 +62,8 @@
       </tr>
       <tr>
         <td width="40%"></td>
-        <td width="10%"><input type="checkbox" checked="checkde" name="check2"></td>
-        <td>10天內记住密码</td>
+            <td width="10%"><input  type="checkbox" checked="checkde" name="check2"></td>
+           <td>10天內记住密码</td>
         <td width="30%"></td>
       </tr>
       <tr>

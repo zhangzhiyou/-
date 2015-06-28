@@ -31,8 +31,8 @@
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
     <div align="center">
-    <tr>
-      <td>
+      <tr>
+        <td>
           <table width=300 height=400 border="1" bordercolor="#ff00ff" cellspacing="0" cellpadding="0">
             <tr>
               <td align="center" valign="middle">
@@ -40,14 +40,14 @@
              </td>
             <tr>
               <td>
-                <font color="#FF0000">1.吕老师登录。</font>
+                <font color="#FF0000">1.审批老师登录。</font>
                 <label>
                   <input type="radio" name="login" value="1">
                 </label>
               </td>
             </tr>
             <td>
-              <font color="#FF0000">2.三号楼老师登录。</font>
+              <font color="#FF0000">2.教室管理员登录。</font>
               <label>
                 <input type="radio" name="login" value="2">
               </label><br/>
@@ -58,9 +58,8 @@
               </td>
             </tr>
           </table>
-
-      </td>
-    </tr>
+        </td>
+      </tr>
     </div>
   </form>
   </body>

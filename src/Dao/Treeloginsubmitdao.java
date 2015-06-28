@@ -68,4 +68,24 @@ public class Treeloginsubmitdao {
         return str;
     }
 
+    public static int choosecorrect(String name,String classroom,String applytime) throws Exception {
+        System.out.println(name+classroom+applytime+"22222");
+        int a=0;
+        Connection con=null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            con = Link.getCon();
+            stmt = con.createStatement();
+            String sql = "select DISTINCT * from threetable where username='" +name+"' and "+"classnumber='" + classroom + "' and "+"applytime1='" + applytime+"';";
+            rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                a++;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return a;
+    }
+
 }

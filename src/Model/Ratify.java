@@ -19,7 +19,7 @@ import java.sql.SQLException;
 /**
  * Created by zhiyou on 15-4-23.
  */
-@WebServlet(urlPatterns = "/loging", name = "Login")
+@WebServlet(urlPatterns = "/loging", name="loging")
 public class Ratify extends HttpServlet {
 
     Lvlogindao lvlogindao = new Lvlogindao();

@@ -20,5 +20,6 @@
     <orderEntry type="jdk" jdkName="1.7 (1)" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" name="mail" level="project" />
   </component>
 </module>

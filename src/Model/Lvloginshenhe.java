@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Created by zhiyou on 15-4-25.
@@ -28,13 +29,12 @@ public class Lvloginshenhe extends HttpServlet {
         /**
          * 增加选择判断的条件
          */
-
         String classroom4 = request.getParameter("classrooml");
         String applytime4 = request.getParameter("applytimel");
 
             try{
                 if("同意".equals(agree4)){
-                    System.out.println(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)+"==========");
+               //     System.out.println(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)+"==========");
                    if(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)>0){
                        request.setAttribute("error","该教室在该时间已被占用");
                        request.getRequestDispatcher("Lvloginout.jsp").forward(request,response);

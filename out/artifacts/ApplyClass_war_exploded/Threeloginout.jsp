@@ -32,11 +32,11 @@
   <form action="loging4" method="post">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/>
-    <%=Lvloginshenhedao.show1()%>
+     <%=Lvloginshenhedao.show1()%>
     <table>
       <tr>
         <td width="40%"></td>
-        <td width="5%">姓名：</td>
+        <td width="3%">姓名：</td>
         <td><input type="text"  name="name2"></td>
         <td width="30%"></td>
       </tr>
@@ -72,13 +72,23 @@
       </tr>
       <tr>
         <td width="40%"></td>
-        <td><input type="submit" value="确认"></td>
-        <td ><a href="Threeloginout.jsp">重置</a></td>
-        <td><a href="threedelete.jsp">选择要删除的名单</a></td>
+        <td width="5%">邮箱：</td>
+        <td><input type="text" name="email"></td>
         <td width="30%"></td>
       </tr>
+      <tr>
+        <td width="40%"></td>
+          <td><input type="submit" value="确认"></td>
+            <td ><a href="Threeloginout.jsp">重置</a></td>
+             <td><a href="threedelete.jsp">选择要删除的名单</a></td>
+          <td width="30%"></td>
+      </tr>
+      <tr>
+        <td width="40%"></td>
+        <font color="red">${error}</font>
+      </tr>
     </table>
-  </form>
-</div>
+   </form>
+  </div>
 </body>
 </html>

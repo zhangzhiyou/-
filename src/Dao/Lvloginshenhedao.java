@@ -83,7 +83,6 @@ public class Lvloginshenhedao  {
             sql = "select DISTINCT username,agree,classroom,applytime from lvtable";
             rs=stmt.executeQuery(sql);
             while (rs.next()){
-
                 str = str+"<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>";
             }
             str += "</table>";
