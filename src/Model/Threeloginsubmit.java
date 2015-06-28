@@ -44,7 +44,7 @@ public class Threeloginsubmit extends HttpServlet {
                 mailInfo.setMailServerPort("25");
                 mailInfo.setValidate(true);
                 mailInfo.setUserName("18753377270@163.com");
-                mailInfo.setPassword("zhang192819");//您的邮箱密码
+                mailInfo.setPassword("********");//您的邮箱密码
                 mailInfo.setFromAddress("18753377270@163.com");
                 mailInfo.setToAddress("858667680@qq.com");
                 mailInfo.setSubject("老师审核教室");
