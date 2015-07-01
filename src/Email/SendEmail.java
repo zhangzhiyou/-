@@ -11,7 +11,7 @@ public class SendEmail {
         mailInfo.setMailServerPort("25");
         mailInfo.setValidate(true);
         mailInfo.setUserName("18753377270@163.com");//三号楼老师的邮箱
-        mailInfo.setPassword("zhang192819");//三号楼老师的邮箱密码
+        mailInfo.setPassword("******");//三号楼老师的邮箱密码
         mailInfo.setFromAddress("18753377270@163.com");//发邮件的邮箱地址
         mailInfo.setToAddress("858667680@qq.com");//接受邮箱的邮箱地址
         mailInfo.setSubject("老师审核教室");
@@ -26,7 +26,7 @@ public class SendEmail {
         mailInfo.setMailServerPort("25");
         mailInfo.setValidate(true);
         mailInfo.setUserName("18753377270@163.com");//三号楼老师的邮箱
-        mailInfo.setPassword("zhang192819");//三号楼老师的邮箱密码
+        mailInfo.setPassword("******");//审核老师的邮箱密码
         mailInfo.setFromAddress("18753377270@163.com");//发邮件的邮箱地址
         mailInfo.setToAddress(tmail);//接受邮箱的邮箱地址
         mailInfo.setSubject("老师审核教室");
