@@ -1,6 +1,7 @@
 package Model;
 
 import Dao.Lvloginshenhedao;
+import Email.SendEmail;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,6 +32,8 @@ public class Lvloginshenhe extends HttpServlet {
          */
         String classroom4 = request.getParameter("classrooml");
         String applytime4 = request.getParameter("applytimel");
+        String lemail4 = request.getParameter("email");
+         SendEmail sendEmail = new SendEmail();
 
             try{
                 if("同意".equals(agree4)){
@@ -42,21 +45,20 @@ public class Lvloginshenhe extends HttpServlet {
                    }
                     else {
                        Lvloginshenhedao.inster1(name4, agree4,classroom4,applytime4);
-
                        Lvloginshenhedao.delect(name4,classroom4,applytime4);//todo
+                     //  SendEmail sendEmail = new SendEmail();
+                       sendEmail.lvsendemail(name4,agree4,classroom4,lemail4);
                        request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+
                    }
                 }
                 else {
                     Lvloginshenhedao.inster1(name4, agree4,classroom4,applytime4);
                     Lvloginshenhedao.delect(name4,classroom4,applytime4);//todo
+
+                    sendEmail.lvsendemail(name4,agree4,classroom4,lemail4);
                     request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
                 }
-
-//                Lvloginshenhedao.inster1(name4, number4, agree4);
-//                Lvloginshenhedao.delect(id4);
-//                request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
-
 
 
             }catch (Exception e){

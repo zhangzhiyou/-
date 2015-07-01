@@ -10,6 +10,7 @@ public class Threelogin {
     private String reason;
     private Integer classroom;
     private String applytimet;
+    private String temail;
 
 
 
@@ -61,4 +62,13 @@ public class Threelogin {
     public void setApplytimet(String applytimet) {
         this.applytimet = applytimet;
     }
+
+    public String getTemail() {
+        return temail;
+    }
+
+    public void setTemail(String temail) {
+        this.temail = temail;
+    }
 }
+

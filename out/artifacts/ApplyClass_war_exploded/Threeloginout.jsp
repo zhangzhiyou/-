@@ -21,6 +21,7 @@
       var imgEle=document.getElementById("img");
       imgEle.src="/verfi?a="+new Date().getTime();
     }
+    input
   </script>
   <style>
     th{background-color: deepskyblue;color: black}

@@ -11,6 +11,7 @@ public class Lvlogin {
     private String classrooml;
     private String applytimel;
     private String checked;
+    private String lemail;
 
     public String getChecked() {
         return checked;
@@ -66,5 +67,13 @@ public class Lvlogin {
 
     public void setApplytimel(String applytimel) {
         this.applytimel = applytimel;
+    }
+
+    public String getLemail() {
+        return lemail;
+    }
+
+    public void setLemail(String lemail) {
+        this.lemail = lemail;
     }
 }

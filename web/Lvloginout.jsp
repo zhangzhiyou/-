@@ -47,12 +47,7 @@
                         <label>不同意</label><input type="radio" value="不同意" name="agree"></td></br>
                     <td width="30%"></td>
                 </tr>
-                <tr>
-                    <td width="40%"></td>
-                    <td width="5%">邮箱：</td>
-                    <td><input type="text"  name="email"></td></br>
-                    <td width="30%"></td>
-                </tr>
+
 
 
                 <tr>
@@ -80,6 +75,13 @@
                     <td>
                         <input type="text" name="applytimel">
                     </td>
+                    <td width="30%"></td>
+                </tr>
+
+                <tr>
+                    <td width="40%"></td>
+                    <td width="5%">邮箱：</td>
+                    <td><input type="text"  name="email"></td></br>
                     <td width="30%"></td>
                 </tr>
                 <tr>
