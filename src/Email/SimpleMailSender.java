@@ -18,6 +18,7 @@ public class SimpleMailSender {
      */
     public boolean sendTextMail(MailSenderInfo mailInfo) {
         // 判断是否需要身份认证
+        // 判断是否需要身份认证
         MyAuthenticator authenticator = null;
         Properties pro = mailInfo.getProperties();
         if (mailInfo.isValidate()) {

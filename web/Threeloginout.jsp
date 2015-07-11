@@ -12,7 +12,7 @@
 <head>
     <title></title>
   <%if(session.getAttribute("currentUser")==null) {
-    response.sendRedirect("Threelogin.jsp");
+    response.sendRedirect("Management.jsp");
     return;
   }%>
 
@@ -30,7 +30,7 @@
 
 <body>
 <div align="center" style="padding-top: 50px">
-  <form action="loging4" method="post">
+  <form action="loging40000" method="post">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/>
      <%=Lvloginshenhedao.show1()%>

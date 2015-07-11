@@ -44,8 +44,11 @@ public class Ratify extends HttpServlet {
                 if (request.getParameter("login").equals("1")) {
                     request.getRequestDispatcher("/Lvlogin.jsp").forward(request, response);//服务器内部转换
                 }
+                if(request.getParameter("login").equals("3")){
+                    request.getRequestDispatcher("/Jiaocaike.jsp").forward(request, response);
+                }
                 if(request.getParameter("login").equals("2")){
-                    request.getRequestDispatcher("/Threelogin.jsp").forward(request, response);
+                    request.getRequestDispatcher("/Management.jsp").forward(request,response);
                 }
 //                else{
 //                    request.getRequestDispatcher("/index.jsp").forward(request, response);

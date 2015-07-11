@@ -61,8 +61,6 @@ public class Lvlogintext extends HttpServlet {
         try{
             con =link.getCon();//链接数据库
             Lvlo currentUser = lvlogindao.login1(con, lv);
-
-
             if(currentUser==null){
                 request.setAttribute("error","用户名或密码错误");
                 request.getRequestDispatcher("Lvlogin.jsp").forward(request,response);

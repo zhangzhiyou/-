@@ -15,24 +15,30 @@ import java.util.Scanner;
  */
 public class Lvloginshenhedao  {
     //todo 添加申请教室学生的名单
-    public static void inster1(String name1,String agree,String classroom,String applytime){
+    public static void inster1(String username,String agree,String classroom,String applytime,String unit,String fixedphone,String phone){
        Connection con = null;
         PreparedStatement stmt = null;
         Lvlogin lvlogin = new Lvlogin();
         try{
-            lvlogin.setName1(name1);
+            lvlogin.setName1(username);
           //  lvlogin.setNumber1(number1);
             lvlogin.setAgree(agree);
             lvlogin.setClassrooml(classroom);
             lvlogin.setApplytimel(applytime);
+            lvlogin.setUnit(unit);
+            lvlogin.setFixedphone(fixedphone);
+            lvlogin.setPhone(phone);
             con = Link.getCon();
-            String sql = "insert into lvtable(username, agree,classroom,applytime) values(?, ?, ?,?);";
+            String sql = "insert into lvtable(username, agree,classroom,applytime,unit,fixedphone,phone) values(?, ?, ?,?,?,?,?);";
             stmt =con.prepareStatement(sql);
             stmt.setString(1,lvlogin.getName1());
           //  stmt.setString(2,lvlogin.getNumber1());
             stmt.setString(2,lvlogin.getAgree());
             stmt.setString(3,lvlogin.getClassrooml());
             stmt.setString(4,lvlogin.getApplytimel());
+            stmt.setString(5,lvlogin.getUnit());
+            stmt.setString(6,lvlogin.getFixedphone());
+            stmt.setString(7,lvlogin.getPhone());
             stmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -62,6 +68,25 @@ public class Lvloginshenhedao  {
         return a;
     }
 
+    public static int delecterror(String username,String agree,String classroom,String applytime) throws Exception {
+        int b=0;
+        Connection con=null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            con = Link.getCon();
+            stmt = con.createStatement();
+            String sql = "select DISTINCT * from lvtable where username'"+username+"'and"+" agree='" +agree +"' and "+ "classroom='" + classroom + "' and "+"applytime='" + applytime+"';";
+            rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                b++;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return b;
+    }
+
     public static void delect(String name,String classroom,String applytime) throws Exception {
         Connection conn=null;
         PreparedStatement stmt=null;
@@ -75,15 +100,15 @@ public class Lvloginshenhedao  {
         Statement stmt = null;
         ResultSet rs = null;
         String sql;
-        String str = "<table  border=\"1\" bordercolor=\"black\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\">" +
-                "<tr><th>姓名</th><th>审核</th><th>教室</th><th>申请时间</th></tr>";
+        String str = "<table  border=\"1\" bordercolor=\"black\" cellpadding=\"10\" cellspacing=\"0\" width=\"1000\">" +
+                "<tr><th>借用单位</th><th>借用人</th><th>单位电话</th><th>借用人电话</th><th>借用时间</th><th>借用教室</th><th>审核</th></tr>";
         try{
             con = Link.getCon();
             stmt =  con.createStatement();
-            sql = "select DISTINCT username,agree,classroom,applytime from lvtable";
+            sql = "select DISTINCT unit,username,fixedphone,phone,applytime,classroom,agree from lvtable";
             rs=stmt.executeQuery(sql);
             while (rs.next()){
-                str = str+"<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>";
+                str = str+"<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6)+"</td><td>"+rs.getString(7)+"</td></tr>";
             }
             str += "</table>";
         }catch (SQLException e){

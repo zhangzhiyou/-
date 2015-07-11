@@ -45,7 +45,7 @@
             <table>
                 <tr height="10">
                     <td width="40%"></td>
-                    <td width="10%">用户名：</td>
+                    <td width="10%">审核老师用户名：</td>
                     <td><input type="text" value="${username}" id="username" name="username1"></td>
                     <td width="30%"></td>
                 </tr>

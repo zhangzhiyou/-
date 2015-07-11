@@ -1,6 +1,7 @@
 package Model;
 
-import Dao.Treeloginsubmitdao;
+import Dao.Jiaocaikesubmitdao;
+import Dao.Lvloginshenhedao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,12 +23,16 @@ public class Threelogindelecte extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF8");
+        String username=request.getParameter("username");
         String classroom=request.getParameter("classrooml1");
         String agree = request.getParameter("agree1");
         String applytime= request.getParameter("applytimel1");
-        try {
 
-            Treeloginsubmitdao.delect1(agree,classroom,applytime);
+        try {
+            Jiaocaikesubmitdao.delect1(username,agree, classroom, applytime);
+            if(Lvloginshenhedao.delecterror(username,agree,classroom,applytime)==0){
+                request.setAttribute("error","表中未有该信息请确认后再填写");
+            }
             request.getRequestDispatcher("threedelete.jsp").forward(request,response);
         } catch (Exception e) {
             e.printStackTrace();

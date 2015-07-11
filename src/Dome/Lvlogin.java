@@ -11,7 +11,10 @@ public class Lvlogin {
     private String classrooml;
     private String applytimel;
     private String checked;
-    private String lemail;
+    private String unit;
+    private String fixedphone;
+    private String phone;
+   // private String lemail;
 
     public String getChecked() {
         return checked;
@@ -69,11 +72,27 @@ public class Lvlogin {
         this.applytimel = applytimel;
     }
 
-    public String getLemail() {
-        return lemail;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setLemail(String lemail) {
-        this.lemail = lemail;
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getFixedphone() {
+        return fixedphone;
+    }
+
+    public void setFixedphone(String fixedphone) {
+        this.fixedphone = fixedphone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -38,20 +38,31 @@
               <td align="center" valign="middle">
                 <font color="#7fff00">请选择登录方式:</font>
              </td>
+            </tr>
             <tr>
               <td>
-                <font color="#FF0000">1.审批老师登录。</font>
+                <font color="#FF0000">1.审批老师登录:</font>
                 <label>
                   <input type="radio" name="login" value="1">
                 </label>
               </td>
             </tr>
+            <tr>
             <td>
-              <font color="#FF0000">2.教室管理员登录。</font>
+              <font color="#FF0000">2.教室管理员登录:</font>
               <label>
                 <input type="radio" name="login" value="2">
               </label><br/>
             </td>
+            </tr>
+            <tr>
+            <td>
+              <font color="black">3.教材科登录:</font>
+              <label>
+                <input type="radio" name="login" value="3">
+              </label>
+            </td>
+            </tr>
             <tr>
               <td align="center" valign="middle">
                 <input type="submit" value="登录">
