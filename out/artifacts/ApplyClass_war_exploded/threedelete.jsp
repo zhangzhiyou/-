@@ -24,7 +24,8 @@
   </script>
   <style>
     th{background-color: deepskyblue;color: black}
-    table#table1{background-color: #f7f6ff;color: black ;width: 500px;}
+    table#table1{background-color: #FFEFC1;color: black ;width: 500px;}
+    .t-table{width:1000px;background-color: bisque;}
   </style>
 </head>
 <body>
@@ -32,12 +33,14 @@
   <form action="loging5" method="post">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
-  <%=Lvloginshenhedao.show1()%><br/>
-    <table id="table1">
+  <div class="t-table">
+    <%=Lvloginshenhedao.show1()%>
+    </div><br/>
+      <table id="table1">
       <tr height="10">
         <td width="40%"></td>
         <td width="20%">
-          <font color="yellow">审核</font>：</td>
+          <font >审核</font>：</td>
         <td><label>同意</label><input type="radio" value="同意" name="agree1">
         <label>不同意</label><input type="radio" value="不同意" name="agree1">
         </td>
@@ -46,21 +49,21 @@
       <tr height="10">
         <td width="40%"></td>
         <td width="20%">
-          <font color="lime">借用教室</font>:</td>
+          <font >借用教室</font>:</td>
         <td><input type="text"  name="classrooml1"></td>
         <td width="30%"></td>
       </tr>
       <tr height="10">
         <td width="40%"></td>
         <td width="20%">
-          <font color="lime">借用人</font>:</td>
+          <font >借用人</font>:</td>
         <td><input type="text"  name="username"></td>
         <td width="30%"></td>
       </tr>
       <tr height="10">
         <td width="40%"></td>
         <td width="25%">
-          <font color="red">审请时间</font>：</td>
+          <font >审请时间</font>：</td>
         <td><input type="text"  name="applytimel1"></td>
         <td width="30%"></td>
       </tr>
