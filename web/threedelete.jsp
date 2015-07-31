@@ -70,7 +70,9 @@
       <tr>
         <td width="40%"></td>
         <td width="5%"><input type="submit" value="删除"></td>
-        <td><a href="Management.jsp">返回</a></td>
+        <td><a href="Management.jsp">返回</a>
+        <input type="checkbox" value="" name=""></td>
+
         <td width="30%"></td>
       </tr>
       <tr>

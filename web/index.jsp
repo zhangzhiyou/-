@@ -25,10 +25,10 @@
       margin:0 auto;
       }
       .top .t-head .t-logo{width:150px;height:100px;float:left;}
-      .top .t-head .t-desc{font-size:20px;color:#F81B20;line-height:100%;  }
-      .top .t-head .t-login{font-size:20px;color:#FF493B;
+      .top .t-head .t-desc{font-size:20px;color:#F81B20;line-height:100%; padding-top:20px;padding-left:1px; }
+      .top .t-head .t-login{font-size:30px;color:#FF493B;
         float:right;padding-bottom:1px;line-height:100%;}
-      .choose{width:100%;height:645px;background: url("img/edusdut.jpg") ;position:relative;}
+      .choose{width:100%;height:685px;background: url("img/edusdut.jpg") ;position:relative;}
       .choose .c-login{width:400px;height:400px;
         position:absolute; top:90px;left: 480px;}
       .choose .c-login p{width:300px;height:40px;

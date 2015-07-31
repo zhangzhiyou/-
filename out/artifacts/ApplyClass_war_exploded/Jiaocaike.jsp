@@ -41,8 +41,6 @@
     }
     .lvlogin .l-login .l-submit{
       width: 300px;height:40px;}
-
-
   </style>
 </head>
 <body>
