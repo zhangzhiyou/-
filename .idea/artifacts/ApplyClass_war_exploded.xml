@@ -10,6 +10,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="jsp-api" />
           <element id="library" level="project" name="mail" />
+          <element id="library" level="project" name="commons-beanutils-1.7.0" />
         </element>
       </element>
     </root>

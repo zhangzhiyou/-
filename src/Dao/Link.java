@@ -7,7 +7,7 @@ import java.sql.*;
  */
 public class Link {
   static   String url = "jdbc:mysql://localhost:3306/classes?"
-            + "user=root&password=0000&useUnicode=true&characterEncoding=UTF8";
+            + "user=root&password=****&useUnicode=true&characterEncoding=UTF8";
 
 // static    private String jdbcName="com.mysql.jdbc.Driver";
 

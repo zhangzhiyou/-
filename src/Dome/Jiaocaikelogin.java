@@ -8,7 +8,7 @@ public class Jiaocaikelogin {
     private String name2;
     private String number2;
     private String reason;
-    private Integer classroom;
+    private String classroom;
     private String applytimet;
     private String temail;
     private String unit;
@@ -50,11 +50,11 @@ public class Jiaocaikelogin {
         this.reason = reason;
     }
 
-    public Integer getClassroom() {
+    public String getClassroom() {
         return classroom;
     }
 
-    public void setClassroom(Integer classroom) {
+    public void setClassroom(String classroom) {
         this.classroom = classroom;
     }
 

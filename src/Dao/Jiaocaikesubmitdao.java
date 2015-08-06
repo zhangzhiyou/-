@@ -8,7 +8,7 @@ import java.sql.*;
  * Created by zhiyou on 15-4-26.
  */
 public class Jiaocaikesubmitdao {
-    public static void inster2(String name2,String reason,Integer classroom,String applytime1,String temail,String unit,String phone,String fixedphone){
+    public static void inster2(String name2,String reason,String classroom,String applytime1,String temail,String unit,String phone,String fixedphone){
         Connection con= null;
         PreparedStatement stmt = null;
         Jiaocaikelogin jiaocaikelogin = new Jiaocaikelogin();
@@ -30,7 +30,7 @@ public class Jiaocaikesubmitdao {
             stmt.setString(1,jiaocaikelogin.getName2());
            // stmt.setString(2,threelogin.getNumber2());
             stmt.setString(2,jiaocaikelogin.getReason());
-            stmt.setInt(3,jiaocaikelogin.getClassroom());
+            stmt.setString(3, jiaocaikelogin.getClassroom());
             stmt.setString(4,jiaocaikelogin.getApplytimet());
             stmt.setString(5,jiaocaikelogin.getTemail());
             stmt.setString(6,jiaocaikelogin.getUnit());
@@ -45,13 +45,34 @@ public class Jiaocaikesubmitdao {
         }
     }
 
+    //判断老师所审核的学生是否在名单中
+    public static int judge(String name2,String classroom,String applytime1,String unit,String phone,String fixedphone){
+     int d=0;
+        Connection con =null;
+        Statement stam = null;
+        ResultSet rs = null;
+        try {
+            con = Link.getCon();
+            stam = con.createStatement();
+            String sql="select DISTINCT * from threetable where username='"+name2+"'and unit='"+unit+"' and  phone='"+phone+"'AND fixedphone='"+fixedphone+"'AND "+"classnumber='" + classroom + " 'and " +"applytime1='" + applytime1+"';";
+            rs = stam.executeQuery(sql);
+            while (rs.next()){
+                d++;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return d;
+    }
+
+    //把审核完的人员从名单中删除
     public static void delect1( String username, String agree,String classroom,String applytime) throws Exception {
         Connection conn=null;
         PreparedStatement stmt=null;
         conn=Link.getCon();
-        String sql="delete from lvtable where username='"+username+"'and"+" agree='"+agree+"'and "+"classroom='"+classroom+"'and "+" applytime='"+applytime+"';";
+        String sql="delete from lvtable where username='"+username+"'and"+" agree='"+agree+"'and "+"classroom='"+classroom+" 'and "+" applytime='"+applytime+"';";
         stmt=conn.prepareStatement(sql);
-        stmt.executeUpdate();
+          stmt.executeUpdate();
     }
 
     public static String show2()throws SQLException{

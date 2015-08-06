@@ -116,14 +116,17 @@
                 <tr>
                     <td width="40%"></td>
                     <td width="5%"><input type="submit" value="确定"></td>
-                    <td><a href="Lvloginout.jsp">重置</a></td>
+                    <td><a href="index.jsp">返回登录</a></td>
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>
                 <tr>
                     <td width="40%"></td>
-
                     <font color="red">${ error}</font>
+                </tr>
+                <tr>
+                    <td width="40%"></td>
+                    <font color="red">${ success}</font>
                 </tr>
             </table>
 

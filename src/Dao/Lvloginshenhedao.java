@@ -68,6 +68,7 @@ public class Lvloginshenhedao  {
         return a;
     }
 
+
     public static int delecterror(String username,String agree,String classroom,String applytime) throws Exception {
         int b=0;
         Connection con=null;
@@ -76,7 +77,7 @@ public class Lvloginshenhedao  {
         try {
             con = Link.getCon();
             stmt = con.createStatement();
-            String sql = "select DISTINCT * from lvtable where username'"+username+"'and"+" agree='" +agree +"' and "+ "classroom='" + classroom + "' and "+"applytime='" + applytime+"';";
+            String sql = "select DISTINCT * from lvtable where username='"+username+"'and"+" agree='" +agree +"' and "+ "classroom='" + classroom + "' and "+"applytime='" + applytime+"';";
             rs = stmt.executeQuery(sql);
             while (rs.next()){
                 b++;

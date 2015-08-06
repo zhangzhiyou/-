@@ -16,6 +16,7 @@
     return;
   }%>
 
+
   <script type="text/javascript">
     function _change(){
       var imgEle=document.getElementById("img");
@@ -80,7 +81,7 @@
       <tr>
         <td width="40%"></td>
           <td><input type="submit" value="确认"></td>
-            <td ><a href="Threeloginout.jsp">重置</a></td>
+            <td ><a href="index.jsp">返回登录</a></td>
              <td><a href="threedelete.jsp">选择要删除的名单</a></td>
           <td width="30%"></td>
       </tr>

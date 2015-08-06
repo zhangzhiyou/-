@@ -32,19 +32,32 @@ public class Jiaocaikeloginsubmit extends HttpServlet {
         String unit = request.getParameter("unit");
         String phone = request.getParameter("phone");
         String fixedphone = request.getParameter("fixedphone");
-        Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
+//        Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
+        String classnumber = request.getParameter("classroom");
         txt = name3+"申请教室请审核";
+        if(name3.equals("")||reason.equals("")||classroom.equals("")||applytime.equals("")||unit.equals("")){
+            request.setAttribute("error","表中除邮箱外都不能为空");
+            request.getRequestDispatcher("Jiaocaikeloginsubmit.jsp").forward(request,response);
+        }
         try{
             if(Jiaocaikesubmitdao.choosecorrect(name3,classroom,applytime)>0){
-                request.setAttribute("error","该同学不能重复申请");
+                request.setAttribute("error","请不要重复申请");
               //  request.getRequestDispatcher("Threeloginout.jsp").forward(request,response);
                 request.getRequestDispatcher("Jiaocaikeloginsubmit.jsp").forward(request,response);
                 return;
             }
             else {
+                int a=0;
                 Jiaocaikesubmitdao.inster2(name3, reason, classnumber, applytime,temail,unit,phone,fixedphone);
-                SendEmail sendEmail = new SendEmail();
-                sendEmail.send(name3,classroom,applytime);
+                a++;
+                request.setAttribute("success","恭喜您成功提交申请"+a+"次");
+
+
+                //todo 发送邮件
+//                SendEmail sendEmail = new SendEmail();
+//                sendEmail.send(name3,classroom,applytime);
+
+
 //                MailSenderInfo mailInfo = new MailSenderInfo();
 //                mailInfo.setMailServerHost("smtp.163.com");
 //                mailInfo.setMailServerPort("25");
