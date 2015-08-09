@@ -12,4 +12,23 @@
         <!--<servlet-name>threelogindelecte</servlet-name>-->
         <!--<url-pattern>/loging5</url-pattern>-->
     <!--</servlet-mapping>-->
+    <!--审核完后的人员名单表格分页处理-->
+    <servlet>
+        <servlet-name>Examine_paging</servlet-name>
+        <servlet-class>Paging.Examine_paging</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Examine_paging</servlet-name>
+        <url-pattern>/paging</url-pattern>
+    </servlet-mapping>
+
+    <!--待审和的人员名单处理-->
+    <servlet>
+        <servlet-name>Apply_paging</servlet-name>
+        <servlet-class>Paging.Apply_paging</servlet-class>
+     </servlet>
+    <servlet-mapping>
+        <servlet-name>Apply_paging</servlet-name>
+        <url-pattern>/apply_paging</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -31,37 +31,40 @@
   <style>
     th{background-color: deepskyblue;color: black}
     table#table1{background-color: #FFEFC1;color: black ;width: 500px;}
-    .t-table{width:1100px;background-color: bisque;}
+    .t-table{width:965px;background-color: bisque;}
+    .t-delect{margin-left: 190px;margin-top: 30px;padding-left: 1px;padding-top:1px; }
   </style>
 </head>
 <body>
- <div align="center"  style="padding-top: 50px;">
-   <form  action="loging5" method="post">
+
+    <!--todo form被移到下面-->
+   <%--<form  action="loging5" method="post">--%>
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
    <div class="t-table">
-    <!--todo 修改开始-->
-      <%--<table id="dg" title="审核后学生名单" class="easyui-datagrid" fitColumns="true"  pagination="true"--%>
-             <%--rownumbers="true" url="img/threedelete.jsp">--%>
-        <%--<thead>--%>
-        <%--<tr>--%>
-          <%--<th field="id" width="50">编号</th>--%>
-          <%--<th field="gradeDesc" width="91">借用人</th>--%>
-          <%--<th field="1" width="72">审核</th>--%>
-          <%--<th field="2" width="113">借用教室</th>--%>
-          <%--<th field="3" width="239">借用时间</th>--%>
-          <%--<th field="gradeName" width="238">借用单位</th>--%>
-          <%--<th field="5" width="112">单位电话</th>--%>
-          <%--<th field="4" width="133">借用人电话</th>--%>
-        <%--</tr>--%>
-        <%--</thead>--%>
-      <%--</table>--%>
 
+     <table id="dg" title="申请教室审核后名单" class="easyui-datagrid" fitColumns="true"  pagination="true"
+            rownumbers="true" url="paging"  toolbar="#tb">
+       <thead>
+       <tr>
+         <th field="username" width="50">姓名</th>
+         <th field="agree" width="50">审核</th>
+         <th field="classroom" width="50">教室</th>
+         <th field="applytime" width="100">时间</th>
+         <th field="unit" width="100">学院</th>
+         <th field="fixedphone" width="80">单位电话</th>
+         <th field="phone" width="80">个人电话</th>
+
+       </tr>
+       </thead>
+     </table>
      <!--todo 被注解的内容-->
-     <%=Lvloginshenhedao.show1()%>
+     <%--<%=Lvloginshenhedao.show1()%>--%>
     </div>
      <br/>
     <!--todo 开始注释-->
+   <form  action="loging5" method="post">
+     <div class="t-delect">
       <table id="table1">
       <tr height="10">
         <td width="40%"></td>
@@ -110,7 +113,8 @@
         </tr>
       </table>
     <!--todo 注释结束-->
+       </div>
     </form>
-</div>
+
 </body>
 </html>

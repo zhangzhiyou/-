@@ -62,7 +62,8 @@
           <tr>
             <td width="10%"></td>
             <td width="15%" class="t-login">借用单位：</td>
-            <td><input type="text"  name="unit" value="×××学院" onfocus="this.value=''" onblur="if(this.value=='')this.value='×××学院'"></td>
+            <%--<td><input type="text"  name="unit" value="×××学院" onfocus="this.value=''" onblur="if(this.value=='')this.value='×××学院'"></td>--%>
+            <td><input type="text" name="unit" placeholder="×××学院"></td>
             <td width="20%"></td>
           </tr>
 
@@ -71,7 +72,7 @@
           <tr>
             <td width="20%"></td>
             <td width="10%" class="t-login">借用人：</td>
-            <td><input type="text"  name="name2" value=""></td>
+            <td><input type="text"  name="name2" placeholder="张三"></td>
             <td width="30%"></td>
           </tr>
 
@@ -79,7 +80,7 @@
           <tr>
             <td width="20%"></td>
             <td width="10%" class="t-login">单位电话：</td>
-            <td><input type="text"  name="fixedphone" value="123456" onfocus="this.value=''" onblur="if(this.value=='')this.value='123456'"></td>
+            <td><input type="text"  name="fixedphone" placeholder="123456"></td>
             <td width="30%"></td>
           </tr>
 
@@ -87,7 +88,7 @@
           <tr>
             <td width="20%"></td>
             <td width="17%" class="t-login">借用人电话：</td>
-            <td><input type="text" name="phone" value="123456"  onfocus="this.value=''" onblur="if(this.value=='')this.value='123456'"></td>
+            <td><input type="text" name="phone" placeholder="123456"></td>
             <td width="30%"></td>
           </tr>
           <tr></tr>
@@ -97,7 +98,7 @@
             <td width="10%">
               <font  class="t-login">申请的教室：</font>
             </td>
-            <td><input type="text" name="classroom" value="3104" onfocus="this.value=''" onblur="if(this.value=='')this.value='3104'" on></td>
+            <td><input type="text" name="classroom" placeholder="3101"></td>
             <td width="30%"></td>
           </tr>
           <tr></tr>
@@ -107,7 +108,7 @@
             <td width="10%">
               <font class="t-login"> 申请时间：</font>
             </td>
-            <td><input type="text" name="applytimet" value="周三 五六节（第三周）" onfocus="this.value =''" onblur="if (this.value=='')this.value='周三 五六节（第三周）'"></td>
+            <td><input type="text" name="applytimet" placeholder="周一 三四节(第一周)"></td>
             <td width="30%"></td>
           </tr>
           <tr></tr>
@@ -117,7 +118,7 @@
             <td width="10%">
               <font  class="t-login">理由：</font>
             </td>
-            <td><textarea name="reason" style="width:200px;height:80px;"></textarea></td>
+            <td><textarea name="reason" style="width:200px;height:80px;" placeholder="学习"></textarea></td>
             <td width="30%"></td>
           </tr>
 
@@ -125,7 +126,7 @@
           <tr>
             <td width="20%"></td>
             <td width="10%" class="t-login">邮箱：</td>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="email" placeholder="可以选择性的填写"></td>
             <td width="30%"></td>
           </tr>
 

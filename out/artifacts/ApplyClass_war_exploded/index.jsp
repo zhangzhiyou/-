@@ -27,10 +27,10 @@
       .top .t-head .t-logo{width:150px;height:100px;float:left;}
       .top .t-head .t-desc{font-size:20px;color:#F81B20;line-height:100%; padding-top:20px;padding-left:1px; }
       .top .t-head .t-login{font-size:30px;color:#FF493B;
-        float:right;padding-bottom:1px;line-height:100%;}
+        float:right;padding-bottom:1px;line-height:100%;padding-right: 123px;}
       .choose{width:100%;height:685px;background: url("img/edusdut.jpg") ;position:relative;}
       .choose .c-login{width:400px;height:400px;
-        position:absolute; top:90px;left: 480px;}
+        position:absolute; top:90px;left: 385px;}
       .choose .c-login p{width:300px;height:40px;
         background:#D5D1FF;border-radius:4px;
         float:left;  margin:20px;text-align:center}

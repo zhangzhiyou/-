@@ -29,12 +29,12 @@
         }
         .top .l-head .l-logo{float:left}
         .top .l-head .l-visit{color:#FF1510;font-size:18px;}
-        .top .l-head .l-desc{float: right;color: #FFF ;line-height:100px;font-size:24px}
-        .lvlogin{width:100%;height:700px;
+        .top .l-head .l-desc{float: right;color: #FFF ;line-height:100px;font-size:24px;padding-right:123px;}
+        .lvlogin{width:100%;height:780px;
             background: url("img/sdut1.jpg");position:relative }
         .lvlogin .l-login{width:500px;height:300px;
           position:absolute;top:140px;
-            left:450px}
+            left:360px}
         .lvlogin .l-login p{width:300px;height:40px;
             background:#D5D1FF;border-radius:4px;
             float:left;
@@ -74,11 +74,11 @@
                 <div class="l-login">
                         <p>
                             <span>用户名：</span>
-                            <input type="text" class="l-name" name="username1">
+                            <input type="text" class="l-name" name="username1" autocomplete="off">
                         </p>
                     <p>
                         <span>密码：</span>
-                        <input type="password" class="l-name" name="password1">
+                        <input type="password" class="l-name" name="password1" autocomplete="off">
                     </p>
                     <p>
                         <input type="submit" class="l-submit" value="登录">
