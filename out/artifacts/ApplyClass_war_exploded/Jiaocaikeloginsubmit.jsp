@@ -19,26 +19,11 @@
       imgEle.src="/verfi?a="+new Date().getTime();
     }
   </script>
-  <style>
-    *{padding:0;margin: 0}
-    body{font-size:12px;font-family:"微软雅黑" ;color: #666}
-    th{background-color: #ff7f84;color: #000000
-    }
 
-    .top{width:100%;height:50px;background: #38C7FF}
-
-    .top .t-sign{width:400px;  height: 50px;margin-left:20px;
-      float:left;font-size:15px;}
-
-
-    .top .t-head{width: 600px;height:50px;font-size: 20px;
-      color: red;line-height: 100%;margin-bottom:1px;margin-top:13px;
-      float:right;}
-
-    .login .t-body{width:669px;height:315px;background: bisque;
-    }
-    .login .t-body .t-login{}
-  </style>
+  <link type="text/css" href="css/jiaocaikeloginsubmit.css" rel="stylesheet"/>
+  <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.easyui.min.js"></script>
+  <script type="text/javascript" src="jquery-easyui-1.3.6/locale/easyui-lang-zh_CN.js"></script>
 </head>
     <body>
     <div class="top">
@@ -54,7 +39,7 @@
     <div align="center" style="padding-top: 50px" class="login">
       <form action="loging4" method="post">
 
-        <img border="0" src="img/am.jpg" width="100%" height="100%"
+        <img border="0" src="img/am.jpg" width="110%" height="100%"
              style='position: absolute;left:0px;top:0px;z-index: -1'/>
         <%--<%=Lvloginshenhedao.show1()%>--%><!--todo 可以显示吕老师审批后的学生名单-->
        <div class="t-body" align="center">
@@ -106,7 +91,7 @@
           <tr>
             <td width="20%"></td>
             <td width="10%">
-              <font class="t-login"> 申请时间：</font>
+              <font class="t-login"> 使用时间：</font>
             </td>
             <td><input type="text" name="applytimet" placeholder="周一 三四节(第一周)"></td>
             <td width="30%"></td>
@@ -126,7 +111,7 @@
           <tr>
             <td width="20%"></td>
             <td width="10%" class="t-login">邮箱：</td>
-            <td><input type="text" name="email" placeholder="可以选择性的填写"></td>
+            <td><input type="text" name="email" ></td>
             <td width="30%"></td>
           </tr>
 

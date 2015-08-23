@@ -1,0 +1,16 @@
+*{margin: 0;padding:0}
+
+th{background-color:deepskyblue;color: black}
+table#table3{background-color: blanchedalmond;
+    color: black;width: 500px;}
+.s-teacher .s-table{width:950px;
+    background-color:bisque;}
+.head{width:110%;height:70px;background-color: aquamarine;
+    margin: 0 auto;position:relative; }
+.head .h-logo .h-chain{width:1000px;height:70px;
+    margin:0 auto;}
+.s-teacher{ width:110%;height:600px; position:absolute;
+    padding-top:5px;}
+.head .h-logo .h-chain .h-desc{font-size: 20px;
+    line-height:100% ;color:#FF1C24;
+    float: right;padding-top: 20px;padding-right: 320px;}

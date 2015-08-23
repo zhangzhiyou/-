@@ -19,38 +19,29 @@
         <%--}--%>
 
     <%--</script>--%>
+    <link type="text/css" href="css/Lvlogin.css" rel="stylesheet"/>
+    <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.3.6/locale/easyui-lang-zh_CN.js"></script>
+   <script type="text/javascript">
+      $(function(){
+          $(".l-login").each(function(){
+              $(this)
+                      .css("position","relative")
+                      .animate({
+                          left:"+=270",
+                          top:"+=160"
+                      })
+          })
+      })
+
+
+   </script>
+
     <style>
-        *{margin:0;padding:0}
-        .top{ margin:0 auto; width:100%;
-            height:100px;background: #1B7FFF}
-        .top .l-head{width:1000px;
-            height:100px;
-            margin: 0 auto;
+        .lvlogin{
+            background: url("img/sdut1.jpg");
         }
-        .top .l-head .l-logo{float:left}
-        .top .l-head .l-visit{color:#FF1510;font-size:18px;}
-        .top .l-head .l-desc{float: right;color: #FFF ;line-height:100px;font-size:24px;padding-right:123px;}
-        .lvlogin{width:100%;height:780px;
-            background: url("img/sdut1.jpg");position:relative }
-        .lvlogin .l-login{width:500px;height:300px;
-          position:absolute;top:140px;
-            left:360px}
-        .lvlogin .l-login p{width:300px;height:40px;
-            background:#D5D1FF;border-radius:4px;
-            float:left;
-           margin:20px}
-        .lvlogin .l-login p span{width:100px;height:40px;
-            font-size:16px;color:#fff;background:#ABABC4;
-            float:left;border-radius:4px;line-height:40px;
-            text-align:center;
-        }
-        .lvlogin .l-login .l-name{width:200px;height:40px;
-            font-size:16px;color: #fff;background:#9495A4;
-            border-radius:4px;outline:none;border:0px;
-            padding:5px;text-align:center;
-        }
-        .lvlogin .l-login .l-submit{
-            width: 300px;height:40px;}
     </style>
 </head>
     <body>
@@ -83,35 +74,15 @@
                     <p>
                         <input type="submit" class="l-submit" value="登录">
                     </p>
+                    <p>
+                        <tr>
+                            <td width="40%"></td>
+                            <font color="red">${error}</font>
+                        </tr>
+                    </p>
                 </div>
             </div>
 
-            <%--<img border="0" src="img/am.jpg" width="100%" height="100%"--%>
-                 <%--style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>--%>
-            <%--<table>--%>
-                <%--<tr height="10">--%>
-                    <%--<td width="40%"></td>--%>
-                    <%--<td width="10%">审核老师用户名：</td>--%>
-                    <%--<td><input type="text" class="lvlogin" value="${username}" id="username" name="username1"></td>--%>
-                    <%--<td width="30%"></td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                    <%--<td width="40%"></td>--%>
-                    <%--<td width="10%">密    码：</td>--%>
-                    <%--<td><input type="password" value="${password}" id="password" name="password1"></td>--%>
-                    <%--<td width="30%"></td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                    <%--<td width="40%"></td>--%>
-                    <%--<td width="10%"><input type="submit" value="登入"></td>--%>
-                    <%--<td><a href="Lvlogin.jsp">重置</a></td>--%>
-                    <%--<td width="30%"></td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                    <%--<td width="40%"></td>--%>
-                    <%--<font color="red">${ error}</font>--%>
-                <%--</tr>--%>
-            <%--</table>--%>
         </form>
     <%--</div>--%>
 

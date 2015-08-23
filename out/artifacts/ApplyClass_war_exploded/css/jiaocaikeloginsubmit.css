@@ -1,0 +1,17 @@
+*{padding:0;margin: 0}
+body{font-size:12px;font-family:"微软雅黑" ;color: #666}
+th{background-color: #ff7f84;color: #000000
+}
+
+.top{width:110%;height:50px;background: #38C7FF}
+
+.top .t-sign{width:400px;  height: 50px;margin-left:20px;
+    float:left;font-size:15px;}
+
+
+.top .t-head{width: 600px;height:50px;font-size: 20px;
+    color: red;line-height: 100%;margin-bottom:1px;margin-top:13px;
+    margin-right: 36px;  float:right;}
+
+.login .t-body{width:669px;height:315px;background: bisque;
+}

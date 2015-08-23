@@ -33,7 +33,7 @@ public class Jiaocaikeloginsubmit extends HttpServlet {
         String phone = request.getParameter("phone");
         String fixedphone = request.getParameter("fixedphone");
 //        Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
-        String classnumber = request.getParameter("classroom");
+      //  String classsnumber = request.getParameter("classroom");
         txt = name3+"申请教室请审核";
         if(name3.equals("")||reason.equals("")||classroom.equals("")||applytime.equals("")||unit.equals("")){
             request.setAttribute("error","表中除邮箱外都不能为空");
@@ -48,31 +48,10 @@ public class Jiaocaikeloginsubmit extends HttpServlet {
             }
             else {
                 int a=0;
-                Jiaocaikesubmitdao.inster2(name3, reason, classnumber, applytime,temail,unit,phone,fixedphone);
+                Jiaocaikesubmitdao.inster2(name3, reason, classroom, applytime,temail,unit,phone,fixedphone);
                 a++;
                 request.setAttribute("success","恭喜您成功提交申请"+a+"次");
 
-
-                //todo 发送邮件
-//                SendEmail sendEmail = new SendEmail();
-//                sendEmail.send(name3,classroom,applytime);
-
-
-//                MailSenderInfo mailInfo = new MailSenderInfo();
-//                mailInfo.setMailServerHost("smtp.163.com");
-//                mailInfo.setMailServerPort("25");
-//                mailInfo.setValidate(true);
-//                mailInfo.setUserName("18753377270@163.com");//三号楼老师的邮箱
-//                mailInfo.setPassword("zhang192819");//三号楼老师的邮箱密码
-//                mailInfo.setFromAddress("18753377270@163.com");//发邮件的邮箱地址
-//                mailInfo.setToAddress("858667680@qq.com");//接受邮箱的邮箱地址
-//                mailInfo.setSubject("老师审核教室");
-//                mailInfo.setContent(name3+"想申请"+classroom+"教室  申请使用教室的时间"+applytime);
-                //这个类主要来发送邮件
-              //  SimpleMailSender sms = new SimpleMailSender();
-              //  sms.sendTextMail(mailInfo);//发送文体格式
-              //  sms.sendHtmlMail(mailInfo);//发送html格式
-               // request.getRequestDispatcher("Threeloginout.jsp").forward(request, response);
                 request.getRequestDispatcher("Jiaocaikeloginsubmit.jsp").forward(request,response);
             }
 

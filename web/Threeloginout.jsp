@@ -22,7 +22,6 @@
       var imgEle=document.getElementById("img");
       imgEle.src="/verfi?a="+new Date().getTime();
     }
-    input
   </script>
   <style>
     th{background-color: deepskyblue;color: black}
@@ -42,12 +41,6 @@
         <td><input type="text"  name="name2"></td>
         <td width="30%"></td>
       </tr>
-      <%--<tr>--%>
-        <%--<td width="40%"></td>--%>
-        <%--<td width="5%">学号：</td>--%>
-        <%--<td><input type="text" name="number2"></td>--%>
-        <%--<td width="30%"></td>--%>
-      <%--</tr>--%>
       <tr>
         <td width="40%"></td>
         <td width="5%">
@@ -81,7 +74,7 @@
       <tr>
         <td width="40%"></td>
           <td><input type="submit" value="确认"></td>
-            <td ><a href="index.jsp">返回登录</a></td>
+            <td ><a href="index.jsps">返回登录</a></td>
              <td><a href="threedelete.jsp">选择要删除的名单</a></td>
           <td width="30%"></td>
       </tr>

@@ -15,31 +15,29 @@
         //   imgEle.src ="/verfi?a="+new Date().getTime();
         imgEle.src="/verfi?a="+new Date().getTime();
       }
-
+    </script>
+    <%--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.6/themes/default/easyui.css">--%>
+    <%--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.6/themes/icon.css">--%>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="jquery-easyui-1.3.6/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('.c-login').each(function(){
+          $(this)
+                  .css('position','relative')
+                  .animate({
+                    left:"+=384",
+                    top:"+=99"
+                  },
+              'slow'
+          )
+        })
+      })
     </script>
     <style type="text/css">
-      *{padding: 0;margin:0}
-      body{font-size:12px;font-family:"微软雅黑";color:#666}
-      .top{width:100%;height:100px;background: #1224BE}
-      .top .t-head{width:1000px;height:100px;
-      margin:0 auto;
-      }
-      .top .t-head .t-logo{width:150px;height:100px;float:left;}
-      .top .t-head .t-desc{font-size:20px;color:#F81B20;line-height:100%; padding-top:20px;padding-left:1px; }
-      .top .t-head .t-login{font-size:30px;color:#FF493B;
-        float:right;padding-bottom:1px;line-height:100%;padding-right: 123px;}
-      .choose{width:100%;height:685px;background: url("img/edusdut.jpg") ;position:relative;}
-      .choose .c-login{width:400px;height:400px;
-        position:absolute; top:90px;left: 385px;}
-      .choose .c-login p{width:300px;height:40px;
-        background:#D5D1FF;border-radius:4px;
-        float:left;  margin:20px;text-align:center}
-      .choose .c-login p span{margin-top: 5px;font-size: 24px;
-        /*font-size:16px;color:#fff;background:#ABABC4;*/
-        /*float:left;border-radius:4px;line-height:40px;*/
-        }
-      /*.choose .c-login .c-radio{padding:0 auto;}*/
-      .choose .c-login .c-submit{width:300px;height:40px;}
+      .choose{background: url("img/edusdut.jpg")}
     </style>
   </head>
   <body>
@@ -51,7 +49,8 @@
             <img src="img/sdut2.jpg" alt="美丽的山东理工大学" width="150px" height="100px">
           </a>
         </div>
-        <div class="t-desc">点击左侧图片访问教务处网站
+        <div class="t-desc">
+          点击左侧图片访问教务处网站
         </div>
         <div class="t-login">
           选择登录

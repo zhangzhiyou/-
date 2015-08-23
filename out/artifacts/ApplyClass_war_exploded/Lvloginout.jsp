@@ -19,31 +19,13 @@
             alert("<\/script>")//"\表示转意字符"
         }
     </script>
+    <link rel="stylesheet" type="text/css" href="css/lvloginout.css"/>
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.6/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.6/themes/icon.css">
     <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.min.js"></script>
     <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="jquery-easyui-1.3.6/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="vakata-jstree-2f630b4%20(2)/dist/jstree.js"></script>
-    <style>
-        *{margin: 0;padding:0}
-
-        th{background-color:deepskyblue;color: black}
-        table#table3{background-color: blanchedalmond;
-            color: black;width: 500px;}
-            .s-teacher .s-table{width:950px;
-                background-color:bisque;}
-        .head{width:100%;height:70px;background-color: aquamarine;
-            margin: 0 auto;position:relative; }
-        .head .h-logo .h-chain{width:1000px;height:70px;
-            margin:0 auto;}
-        .s-teacher{ width:100%;height:600px; position:absolute;
-            padding-top:5px;}
-        .head .h-logo .h-chain .h-desc{font-size: 20px;
-            line-height:100% ;color:#FF1C24;
-            float: right;padding-top: 20px;padding-right: 320px;}
-
-    </style>
 </head>
 <body>
 <!--todo 被移到下面-->
@@ -76,11 +58,10 @@
                         <th field="reason" width="120">理由</th>
                         <th field="classnumber" width="25">教室</th>
                         <th field="applytime1" width="80">时间</th>
-                        <%--<th field="temail" width="100">邮箱</th>--%>
+                        <th field="temail" width="100">邮箱</th>
                         <th field="unit" width="90">学院</th>
                         <th field="phone" width="50">个人电话</th>
                         <th field="fixedphone" width="50">单位电话</th>
-
                     </tr>
                     </thead>
                 </table>
@@ -110,11 +91,17 @@
                     <td><input type="text"  name="applytimel"></td></br>
                     <td width="30%"></td>
                 </tr>
+                <tr>
+                    <td width="40%"></td>
+                    <td width="25%">邮箱：</td>
+                    <td><input type="text"  name="applytimel"></td></br>
+                    <td width="30%"></td>
+                </tr>
                 <tr></tr>
                 <tr>
                     <td width="40%"></td>
                     <td width="25%">学院：</td>
-                    <td><input type="text"  name="unit"></td>
+                    <td><input type="text" name="unit"></td>
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>
@@ -155,11 +142,7 @@
                 <tr></tr>
                 <tr>
                     <td width="40%"></td>
-                    <font color="red">${ error}</font>
-                </tr>
-                <tr>
-                    <td width="40%"></td>
-                    <font color="red">${ success}</font>
+                    <font color="red">${error}</font>
                 </tr>
             </table>
       </form>

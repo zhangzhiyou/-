@@ -66,6 +66,13 @@
    <form  action="loging5" method="post">
      <div class="t-delect">
       <table id="table1">
+          <tr height="10">
+              <td width="40%"></td>
+              <td width="20%">
+                  <font >借用人</font>:</td>
+              <td><input type="text"  name="username"></td>
+              <td width="30%"></td>
+          </tr>
       <tr height="10">
         <td width="40%"></td>
         <td width="20%">
@@ -82,13 +89,7 @@
         <td><input type="text"  name="classrooml1"></td>
         <td width="30%"></td>
       </tr>
-      <tr height="10">
-        <td width="40%"></td>
-        <td width="20%">
-          <font >借用人</font>:</td>
-        <td><input type="text"  name="username"></td>
-        <td width="30%"></td>
-      </tr>
+
       <tr height="10">
         <td width="40%"></td>
         <td width="25%">
@@ -107,10 +108,6 @@
         <td width="40%"></td>
         <font color="red">${error}</font>
       </tr>
-        <tr>
-          <td width="40%"></td>
-          <font color="red">${success}</font>
-        </tr>
       </table>
     <!--todo 注释结束-->
        </div>
