@@ -26,6 +26,34 @@
     <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="jquery-easyui-1.3.6/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="vakata-jstree-2f630b4%20(2)/dist/jstree.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#delete").click(function(){
+                var selectedRows = $("#dg").datagrid('getSelections');
+                if(selectedRows.length==0){
+                    $.messager.alert("系统提示","请选择要删除的项");
+                    return;
+                }
+                var strIds=[];
+                for(var i=0;i<selectedRows.length;i++){
+                    strIds.push(selectedRows[i].id);//todo 选取每条记录的id
+                }
+                var ids =strIds.join(',');//todo 在查询出来的id之间加入','
+                $.messager.confirm("系统提示","您确定要删除<font color='red'>"+selectedRows.length+"<font>条数据吗？",function(r){
+                    if(r){
+                        $.post("examineDelete",{deiLds:ids},function(result){
+                            if(result.success){
+                                $.messager.alert("系统提示","您已成功删除<font color='red'>"+result.delNums+"<font>条记录");
+                                $("#dg").datagrid("reload");//todo 删除后刷新"#dg"表
+                            }else{
+                                alert("删除失败");
+                            }
+                        },"json")
+                    }
+                })
+            })
+        })
+    </script>
 </head>
 <body>
 <!--todo 被移到下面-->
@@ -54,14 +82,16 @@
                     rownumbers="true"   url="apply_paging"  toolbar="#tb">
                     <thead>
                     <tr>
+                        <th field="cb" checkbox="true"></th>
+                        <th field="id" width="30">id</th>
                         <th field="username" width="30">姓名</th>
                         <th field="reason" width="120">理由</th>
                         <th field="classnumber" width="25">教室</th>
-                        <th field="applytime1" width="80">时间</th>
+                        <th field="applytime1" width="85">申请时间</th>
                         <th field="temail" width="100">邮箱</th>
                         <th field="unit" width="90">学院</th>
-                        <th field="phone" width="50">个人电话</th>
-                        <th field="fixedphone" width="50">单位电话</th>
+                        <th field="phone" width="60">个人电话</th>
+                        <th field="fixedphone" width="60">单位电话</th>
                     </tr>
                     </thead>
                 </table>
@@ -137,6 +167,7 @@
                     <td width="40%"></td>
                     <td width="5%"><input type="submit" value="确定"></td>
                     <td><a href="index.jsp">返回登录</a></td>
+                    <td> <a href="javascript:gradDelete()" id="delete" class="easyui-linkbutton" iconCls="icon-remove"plain="true">删除</a></td>
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>

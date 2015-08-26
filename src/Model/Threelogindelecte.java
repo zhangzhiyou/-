@@ -30,6 +30,7 @@ public class Threelogindelecte extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF8");
         //todo 开始注释
+        String id = request.getParameter("id");
         String username=request.getParameter("username");
         String classroom=request.getParameter("classrooml1");
         String agree = request.getParameter("agree1");

@@ -37,7 +37,7 @@
       })
     </script>
     <style type="text/css">
-      .choose{background: url("img/edusdut.jpg")}
+      /*.choose{background: url("img/edusdut.jpg")}*/
     </style>
   </head>
   <body>

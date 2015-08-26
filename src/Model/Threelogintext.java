@@ -38,7 +38,7 @@ public class Threelogintext extends HttpServlet {
         request.setAttribute("username2", username3);
         request.setAttribute("password2", password3);
         if (username3.isEmpty() || password3.isEmpty()) {
-            request.setAttribute("erroe", "用户名或密码不能为空");
+            request.setAttribute("error", "用户名或密码不能为空");
             request.getRequestDispatcher("Management.jsp").forward(request, response);
             return;
         }

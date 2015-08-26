@@ -8,8 +8,13 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
 .top .t-head .t-desc{font-size:20px;color:#F81B20;line-height:100%; padding-top:20px;padding-left:1px; }
 .top .t-head .t-login{font-size:30px;color:#FF493B;
     float:right;padding-bottom:1px;line-height:100%;padding-right: 123px;}
-.choose{width:110%;height:685px ;position:relative;}
-.choose .c-login{width:400px;height:400px;
+.choose{width:110%;
+    height:685px ;
+    position:relative;
+    background-image: url(../img/edusdut.jpg);
+}
+.choose .c-login{width:400px;
+    height:400px;
     position:absolute; top:1px;left: 1px;}
 .choose .c-login p{width:300px;height:40px;
     background:#D5D1FF;border-radius:4px;

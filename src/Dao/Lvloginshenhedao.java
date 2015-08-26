@@ -120,4 +120,9 @@ public class Lvloginshenhedao  {
         }
         return str;
     }
+    public int gradeDelete(Connection con,String delIds)throws Exception{
+        String sql = "delete from threetable where id in("+delIds+")";
+        PreparedStatement psmtp = con.prepareStatement(sql);
+        return psmtp.executeUpdate();
+    }
 }

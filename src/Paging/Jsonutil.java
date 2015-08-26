@@ -22,7 +22,6 @@ public class Jsonutil {
             }
             array.add(mapOfColValues);
         }
-        System.out.println("1111111"+array);
         return array;
 
     }

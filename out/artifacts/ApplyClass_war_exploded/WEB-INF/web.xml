@@ -4,14 +4,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <!--<servlet>-->
-        <!--<servlet-name>threelogindelecte</servlet-name>-->
-        <!--<servlet-class>Model.Threelogindelecte</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>threelogindelecte</servlet-name>-->
-        <!--<url-pattern>/loging5</url-pattern>-->
-    <!--</servlet-mapping>-->
     <!--审核完后的人员名单表格分页处理-->
     <servlet>
         <servlet-name>Examine_paging</servlet-name>
@@ -30,5 +22,23 @@
     <servlet-mapping>
         <servlet-name>Apply_paging</servlet-name>
         <url-pattern>/apply_paging</url-pattern>
+    </servlet-mapping>
+    <!--教室管理员删除审核后的记录-->
+    <servlet>
+        <servlet-name>Manage</servlet-name>
+        <servlet-class>deleteNotes.ManageDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Manage</servlet-name>
+        <url-pattern>/grateDelete</url-pattern>
+    </servlet-mapping>
+    <!--审核老师删除过期无效数据-->
+    <servlet>
+        <servlet-name>Examine</servlet-name>
+        <servlet-class>deleteNotes.ExamineDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Examine</servlet-name>
+        <url-pattern>/examineDelete</url-pattern>
     </servlet-mapping>
 </web-app>

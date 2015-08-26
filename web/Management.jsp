@@ -29,8 +29,8 @@
   </script>
   <style>
 
-    .lvlogin{
-      background: url("img/sdut1.jpg");position:relative }
+    /*.lvlogin{*/
+      /*background: url("img/sdut1.jpg");position:relative }*/
 
   </style>
 </head>
