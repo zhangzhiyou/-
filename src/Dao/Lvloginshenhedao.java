@@ -67,8 +67,6 @@ public class Lvloginshenhedao  {
         }
         return a;
     }
-
-
     public static int delecterror(String username,String agree,String classroom,String applytime) throws Exception {
         int b=0;
         Connection con=null;
@@ -87,7 +85,6 @@ public class Lvloginshenhedao  {
         }
         return b;
     }
-
     public static void delect(String name,String classroom,String applytime) throws Exception {
         Connection conn=null;
         PreparedStatement stmt=null;
