@@ -26,6 +26,7 @@ public class ExamineDelete extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //todo deiLds参数是从Lvlogin.jsp中post方法中的第算个三个参数中得到的
         String deiLds = request.getParameter("deiLds");
         Connection con = null;
         try{

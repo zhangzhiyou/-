@@ -1,16 +1,25 @@
 *{margin: 0;padding:0}
 
 th{background-color:deepskyblue;color: black}
-table#table3{background-color: blanchedalmond;
+table#table3{
     color: black;width: 500px;}
-.s-teacher .s-table{width:950px;
+.s-teacher .s-table{width:1000px;
     background-color:bisque;}
-.head{width:110%;height:70px;background-color: aquamarine;
+.head{width:110%;height:70px;background-color: #ffd1d5;
     margin: 0 auto;position:relative; }
 .head .h-logo .h-chain{width:1000px;height:70px;
     margin:0 auto;}
-.s-teacher{ width:110%;height:600px; position:absolute;
+.s-teacher{ width:110%;height:100%; position:absolute;
     padding-top:5px;}
 .head .h-logo .h-chain .h-desc{font-size: 20px;
     line-height:100% ;color:#FF1C24;
     float: right;padding-top: 20px;padding-right: 320px;}
+.L-back{
+    text-decoration:none;
+    width: 70px;
+    height:21px;
+    border: 1px solid #908f8f;
+    display: block;
+}
+.L-back:hover{background-color: #908f8f;color: #f7f6ff;
+}

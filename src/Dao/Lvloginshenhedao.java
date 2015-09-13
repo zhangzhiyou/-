@@ -1,14 +1,12 @@
 package Dao;
 
-import Dome.Lvlogin;
+import model.Lvlogin;
 
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.*;
-import java.util.Scanner;
 
 /**
  * Created by zhiyou on 15-4-25.

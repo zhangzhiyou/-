@@ -1,7 +1,6 @@
 package Dao;
 
-import Dome.Three;
-import sun.reflect.generics.tree.Tree;
+import model.Three;
 
 import java.sql.*;
 

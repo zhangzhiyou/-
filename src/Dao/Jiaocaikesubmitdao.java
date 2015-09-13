@@ -1,6 +1,6 @@
 package Dao;
 
-import Dome.Jiaocaikelogin;
+import model.Jiaocaikelogin;
 
 import java.sql.*;
 

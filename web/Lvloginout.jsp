@@ -19,7 +19,10 @@
             alert("<\/script>")//"\表示转意字符"
         }
     </script>
+    <!--引用-->
     <link rel="stylesheet" type="text/css" href="css/lvloginout.css"/>
+
+    <!--引用jqueary已经封装好的js-->
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.6/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="jquery-easyui-1.3.6/themes/icon.css">
     <script type="text/javascript" src="jquery-easyui-1.3.6/jquery.min.js"></script>
@@ -72,7 +75,7 @@
     </div>
 </div>
     <div align="center"  class="s-teacher">
-            <img border="0" src="img/am.jpg" width="100%" height="100%"
+            <img border="0" src="img/beijing3.jpg" width="100%" height="100%"
                  style='position: absolute;left:0px;top:0px;z-index: -1'/>
             <div class="s-table">
                 <!--开始注释-->
@@ -110,11 +113,10 @@
                 <tr>
                     <td width="40%"></td>
                     <td width="25%">借用教室：</td>
-                    <td><input type="text"  name="classrooml"></td></br>
+                    <td><input type="text"name="classrooml"></td></br>
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>
-
                 <tr>
                     <td width="40%"></td>
                     <td width="25%">借用时间：</td>
@@ -143,7 +145,6 @@
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>
-
                 <tr>
                     <td width="40%"></td>
                     <td width="25%">单位电话：</td>
@@ -151,9 +152,6 @@
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>
-
-
-
                 <tr>
                     <td width="40%"></td>
                     <td width="25%">
@@ -166,7 +164,7 @@
                 <tr>
                     <td width="40%"></td>
                     <td width="5%"><input type="submit" value="确定"></td>
-                    <td><a href="index.jsp">返回登录</a></td>
+                    <td><a class="L-back" href="index.jsp">返回登录</a></td>
                     <td> <a href="javascript:gradDelete()" id="delete" class="easyui-linkbutton" iconCls="icon-remove"plain="true">删除</a></td>
                     <td width="30%"></td>
                 </tr>

@@ -3,15 +3,38 @@ body{font-size:12px;font-family:"微软雅黑" ;color: #666}
 th{background-color: #ff7f84;color: #000000
 }
 
-.top{width:110%;height:50px;background: #38C7FF}
+.north{height: 105px;}
+.top{width:100%;height: 100px; background: #bff787
+}
 
-.top .t-sign{width:400px;  height: 50px;margin-left:20px;
+.top .t-sign{width:375px; height: 100px; margin-left:10px;
     float:left;font-size:15px;}
+.center{background-image: url(../img/beijing2.jpg)}
 
-
-.top .t-head{width: 600px;height:50px;font-size: 20px;
-    color: red;line-height: 100%;margin-bottom:1px;margin-top:13px;
-    margin-right: 36px;  float:right;}
-
-.login .t-body{width:669px;height:315px;background: bisque;
+.top .t-head{width: 559px; height: 100px; font-size: 20px;
+    color: red; float: left}
+.login .t-body{
+    width:669px;
+    height:315px;
+}
+.jiao-back{
+    text-decoration: none;
+    width: 70px;
+    height: 25px;
+    display: block;
+    padding-left: 3px;
+    border: 1px solid #d4ff8e;
+}
+.jiao-back:hover{
+    background-color: #545353;
+    color: #fffcdd;
+}
+.west{background-image: url(../img/beijing2.jpg);
+}
+.west .discre{
+        margin-left: 5px;
+        margin-top: 30px;
+}
+.west .discre p{
+    text-align: center;
 }

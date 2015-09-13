@@ -1,7 +1,6 @@
 package Dao;
 
-import Dome.Jiaocaike;
-import Dome.Three;
+import model.Jiaocaike;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

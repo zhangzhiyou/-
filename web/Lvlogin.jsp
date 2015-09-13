@@ -29,8 +29,8 @@
               $(this)
                       .css("position","relative")
                       .animate({
-                          left:"+=270",
-                          top:"+=160"
+                          left:"+=275",
+                          top:"+=125"
                       })
           })
       })

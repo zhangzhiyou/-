@@ -28,7 +28,7 @@
           $(this)
                   .css('position','relative')
                   .animate({
-                    left:"+=384",
+                    left:"+=350",
                     top:"+=99"
                   },
               'slow'
@@ -61,18 +61,21 @@
         <div class="c-login">
             <p>
               <span>1.审批老师登录:</span>
-              <input type="radio" class="c-radio" name="login" value="1" align="center"/>
+              <input type="radio" class="c-radio" name="login" value='1' align="center"/>
             </p>
           <p>
             <span>2.教室管理员登录:</span>
-            <input type="radio" class="c-radio" name="login" value="2" align="center"/>
+            <input type="radio" class="c-radio" name="login" value='2' align="center"/>
           </p>
           <p>
             <span>3.教材科登录:</span>
-            <input type="radio" class="c-radio" name="login" value="3" align="center"/>
+            <input type="radio" class="c-radio" name="login" value='3' align="center"/>
           </p>
           <p>
             <input type="submit" class="c-submit" value="确定">
+          </p>
+          <p>
+            <font color="red">${error}</font>
           </p>
         </div>
     </div>

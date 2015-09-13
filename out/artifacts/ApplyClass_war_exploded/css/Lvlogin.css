@@ -8,13 +8,13 @@
 .top .l-head .l-logo{float:left}
 .top .l-head .l-visit{color:#FF1510;font-size:18px;}
 .top .l-head .l-desc{float: right;color: #FFF ;line-height:100px;font-size:24px;padding-right:123px;}
-.lvlogin{width:110%;height:560px;
+.lvlogin{width:110%;height:100%;
    position:relative ;
     background-image: url(../img/sdut1.jpg);
 }
 .lvlogin .l-login{width:500px;height:300px;
-    position:absolute;top:0px;
-    left:0px}
+    position:absolute;
+    }
 .lvlogin .l-login p{width:300px;height:40px;
     background:#D5D1FF;border-radius:4px;
     float:left;

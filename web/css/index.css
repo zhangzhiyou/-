@@ -9,7 +9,7 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
 .top .t-head .t-login{font-size:30px;color:#FF493B;
     float:right;padding-bottom:1px;line-height:100%;padding-right: 123px;}
 .choose{width:110%;
-    height:685px ;
+    height:100% ;
     position:relative;
     background-image: url(../img/edusdut.jpg);
 }
