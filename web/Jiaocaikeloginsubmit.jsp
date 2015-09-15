@@ -18,6 +18,7 @@
       var imgEle=document.getElementById("img");
       imgEle.src="/verfi?a="+new Date().getTime();
     }
+
   </script>
 
   <link type="text/css" href="css/jiaocaikeloginsubmit.css" rel="stylesheet"/>
@@ -127,7 +128,7 @@
               <tr>
                 <td width="40%"></td>
                 <td><input type="submit" value="提交"></td>
-                <td ><a class="jiao-back" href="index.jsp">返回登录</a></td>
+                <td ><a class="jiao-back" href="Jiaocaike.jsp">返回上级</a></td>
                 <td width="30%"></td>
               </tr>
               <tr></tr>
@@ -145,49 +146,54 @@
         </div>
      </div>
 
-    <div region="west" class="west" style="width: 150px;" title="学院列单" split="true">
+    <div region="west" class="west" style="width: 200px;" title="学院列单" split="true">
       <div class="discre">
-        <p>机械工程学院</p>
+        <MARQUEE class="marquee" onMouseOut = "this.start()"   onMouseOver ="this.stop()" behavior="scroll" style="line-height: 25px;height: 300px;" scrollAmount="1" scrollDelay="1" direction="up">
+        <h1>
+        <p><a href="http://www.sdut.edu.cn">山东理工大学官网</a></p>
+          </h1>
+        <p><a href="http://jxxy.sdut.edu.cn/">机械工程学院</a></p>
 
-        <p>交通与车辆工程学院</p>
+        <p><a href="http://jtxy.sdut.edu.cn/">交通与车辆工程学院</a></p>
 
-        <p>农业工程与食品科学学院</p>
+        <p><a href="http://qgxy.sdut.edu.cn/">农业工程与食品科学学院</a></p>
 
-        <p>电气与电子工程学院</p>
+        <p><a href="http://dz.sdut.edu.cn/index.seam">电气与电子工程学院</a></p>
 
-        <p>计算机科学与技术学院</p>
+        <p><a href="http://jsjxy.sdut.edu.cn/">计算机科学与技术学院</a></p>
 
-        <p>化学工程学院</p>
+        <p><a href="http://hgxy.sdut.edu.cn/">化学工程学院</a></p>
 
-        <p>建筑工程学院</p>
+        <p><a href="http://jgxy.sdut.edu.cn/">建筑工程学院</a></p>
 
-        <p>资源与环境工程学院</p>
+        <%--<p><a href="">资源与环境工程学院</a></p>--%>
 
-        <p>材料科学与工程学院</p>
+        <p><a href="http://xcl.sdut.edu.cn/">材料科学与工程学院</a></p>
 
-        <p>生命科学学院</p>
+        <p><a href="http://smkx.sdut.edu.cn/">生命科学学院</a></p>
 
-        <p>理学院</p>
+        <p><a href="http://lxy.sdut.edu.cn/">理学院</a></p>
 
-        <p>商学院</p>
+        <p><a href="http://bs.sdut.edu.cn/">商学院</a></p>
 
-        <p>文学与新闻传播学院</p>
+        <p><a href="http://wxy.sdut.edu.cn/">文学与新闻传播学院</a></p>
 
-        <p>外国语学院</p>
+        <p><a href="http://wyxy.sdut.edu.cn/">外国语学院</a></p>
 
-        <p>法学院</p>
+        <p><a href="http://law.sdut.edu.cn/uploads/index.html">法学院</a></p>
 
-        <p>马克思主义学院</p>
+        <p><a href="http://mksxy.sdut.edu.cn/">马克思主义学院</a></p>
 
-        <p>美术学院</p>
+        <p><a href="http://msxy.sdut.edu.cn/">美术学院</a></p>
 
-        <p>音乐学院</p>
+        <p><a href="http://yyx.sdut.edu.cn/">音乐学院</a></p>
 
-        <p>体育学院</p>
+        <p><a href="http://tyx.sdut.edu.cn/">体育学院</a></p>
 
-        <p>国防教育学院</p>
+        <%--<p><a href="">国防教育学院</a></p>--%>
 
-        <p>鲁泰纺织服装学院</p>
+        <p><a href="http://fzfzxy.sdut.edu.cn/index.html">鲁泰纺织服装学院</a></p>
+          </MARQUEE>
       </div>
     </div>
    </body>

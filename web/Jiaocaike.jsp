@@ -20,7 +20,7 @@
         $(this)
                 .css('position','relative')
                 .animate({
-                  left:"+=384",
+                  left:"+=500",
                   top:"+=110"
                 },
                 'slow'
@@ -62,6 +62,9 @@
       </p>
       <p>
         <input type="submit" class="l-submit" value="登录" >
+      </p>
+      <p>
+       <a class="l-back" href="index.jsp">返回上一级</a>
       </p>
       <p>
         <tr>

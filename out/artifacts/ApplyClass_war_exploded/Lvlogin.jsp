@@ -29,7 +29,7 @@
               $(this)
                       .css("position","relative")
                       .animate({
-                          left:"+=275",
+                          left:"+=350",
                           top:"+=125"
                       })
           })
@@ -73,6 +73,9 @@
                     </p>
                     <p>
                         <input type="submit" class="l-submit" value="登录">
+                    </p>
+                    <p>
+                        <a class="l-href" href="index.jsp">返回上一级页面</a>
                     </p>
                     <p>
                         <tr>

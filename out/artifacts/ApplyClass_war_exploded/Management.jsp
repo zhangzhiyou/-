@@ -63,6 +63,9 @@
         <input type="submit" class="l-submit" value="登录">
       </p>
       <p>
+        <a class="l-back" href="index.jsp">返回上一级</a>
+      </p>
+      <p>
         <tr>
           <th>
             <font color="red">${error}</font>

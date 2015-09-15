@@ -28,7 +28,7 @@
           $(this)
                   .css('position','relative')
                   .animate({
-                    left:"+=350",
+                    left:"+=400",
                     top:"+=99"
                   },
               'slow'
@@ -79,50 +79,6 @@
           </p>
         </div>
     </div>
-    <%--<img border="0" src="img/am.jpg" width="100%" height="100%"--%>
-         <%--style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>--%>
-    <%--<div align="center">--%>
-      <%--<tr>--%>
-        <%--<td>--%>
-          <%--<table width=300 height=400  cellspacing="0" cellpadding="0">--%>
-            <%--<tr>--%>
-              <%--<td align="center" valign="middle">--%>
-                <%--<font color="black">请选择登录:</font>--%>
-             <%--</td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-              <%--<td>--%>
-                <%--<font color="#FF0000">1.审批老师登录:</font>--%>
-                <%--<label>--%>
-                  <%--<input type="radio" name="login" value="1">--%>
-                <%--</label>--%>
-              <%--</td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-            <%--<td>--%>
-              <%--<font color="#FF0000">2.教室管理员登录:</font>--%>
-              <%--<label>--%>
-                <%--<input type="radio" name="login" value="2">--%>
-              <%--</label><br/>--%>
-            <%--</td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-            <%--<td>--%>
-              <%--<font color="#F00">3.教材科登录:</font>--%>
-              <%--<label>--%>
-                <%--<input type="radio" name="login" value="3">--%>
-              <%--</label>--%>
-            <%--</td>--%>
-            <%--</tr>--%>
-            <%--<tr>--%>
-              <%--<td align="center" valign="middle">--%>
-                <%--<input type="submit" value="登录">--%>
-              <%--</td>--%>
-            <%--</tr>--%>
-          <%--</table>--%>
-        <%--</td>--%>
-      <%--</tr>--%>
-    <%--</div>--%>
   </form>
   </body>
 </html>

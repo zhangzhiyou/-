@@ -126,7 +126,7 @@
                 <tr>
                     <td width="40%"></td>
                     <td width="25%">邮箱：</td>
-                    <td><input type="text"  name="applytimel"></td></br>
+                    <td><input type="text"  name="email"></td></br>
                     <td width="30%"></td>
                 </tr>
                 <tr></tr>

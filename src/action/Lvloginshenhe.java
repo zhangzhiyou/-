@@ -2,6 +2,7 @@ package action;
 
 import Dao.Jiaocaikesubmitdao;
 import Dao.Lvloginshenhedao;
+import Email.SendEmail;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,7 +39,7 @@ public class Lvloginshenhe extends HttpServlet {
         String classroom4 = request.getParameter("classrooml");
         String applytime4 = request.getParameter("applytimel");
           String lemail4 = request.getParameter("email");
-        //  SendEmail sendEmail = new SendEmail();
+//          SendEmail sendEmail = new SendEmail();
         int a=0;
         if (Jiaocaikesubmitdao.judge(name4, classroom4, applytime4, unit, phone, fixedphone) == 0) {
             request.setAttribute("error", "您审批的该记录不在申请表中");
@@ -56,10 +57,10 @@ public class Lvloginshenhe extends HttpServlet {
                         Lvloginshenhedao.inster1(name4, agree4, classroom4, applytime4, unit, fixedphone, phone);
                         Lvloginshenhedao.delect(name4, classroom4, applytime4);
                         //todo 如果邮箱填写，就发送邮件
-                      //  if(lemail4!=null) {
-                            //     SendEmail sendEmail = new SendEmail();
-                            //      sendEmail.lvsendemail(name4,agree4,classroom4,lemail4);//todo 发送邮件
-                      //  }
+                        if(lemail4!=null) {
+                                 SendEmail sendEmail = new SendEmail();
+                                  sendEmail.lvsendemail(name4, agree4, classroom4, lemail4);//todo 发送邮件
+                        }
                         request.setAttribute("error","恭喜已经审批完一条");
                         request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
                     }
