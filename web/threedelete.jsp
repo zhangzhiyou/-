@@ -73,10 +73,9 @@
  </script>
 </head>
 <body>
-    <img border="0" src="img/beijing4.jpg" width="100%" height="100%"
-         style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>
-   <div class="t-table">
-
+    <%--<img border="0" src="img/beijing4.jpg" width="100%" height="100%"--%>
+         <%--style='position: absolute;left:0px;top:0px;z-index: -1'/><br/>--%>
+    <div class="t-table">
      <table id="dg" title="申请教室审核后名单" class="easyui-datagrid" fitColumns="true"  pagination="true"
             rownumbers="true" url="paging"  toolbar="#tb">
        <thead>
@@ -94,9 +93,10 @@
        </tr>
        </thead>
      </table>
+    </div>
      <!--todo 被注解的内容-->
      <%--<%=Lvloginshenhedao.show1()%>--%>
-    </div>
+
      <br/>
     <!--todo 开始注释-->
    <form  action="loging5" method="post">

@@ -25,7 +25,7 @@ public class LvshenheDao {
     }
     public int gradeCount(Connection con) throws Exception{//获取总计录数
         String sql = "select count(*) as total from threetable";
-        PreparedStatement pstmt = con.prepareStatement(sql.toString());
+        PreparedStatement pstmt = con.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
         if(rs.next()){
             return rs.getInt("total");

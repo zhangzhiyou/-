@@ -28,8 +28,8 @@
           $(this)
                   .css('position','relative')
                   .animate({
-                    left:"+=400",
-                    top:"+=99"
+                    left:"+=450",
+                    top:"+=199"
                   },
               'slow'
           )
@@ -46,7 +46,7 @@
       <div class="t-head">
         <div class="t-logo">
           <a href="http://jwch.sdut.edu.cn/">
-            <img src="img/sdut2.jpg" alt="美丽的山东理工大学" width="150px" height="100px">
+            <img src="img/sdut2.jpg" alt="美丽的山东理工大学" width="200px" height="150px">
           </a>
         </div>
         <div class="t-desc">

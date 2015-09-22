@@ -4,32 +4,48 @@ th{background-color: #ff7f84;color: #000000
 }
 
 .north{height: 105px;}
-.top{width:100%;height: 100px; background: #bff787
+.top{width:100%;height: 100px; background: #ecf7f0
 }
 
 .top .t-sign{width:375px; height: 100px; margin-left:10px;
     float:left;font-size:15px;}
-.center{background-image: url(../img/beijing2.jpg)}
+.centers{
+    /*background-image: url(../img/beijing2.jpg)*/
+    /*background-color:#a4ffd5 ;*/
+}
 
 .top .t-head{width: 559px; height: 100px; font-size: 20px;
     color: red; float: left}
 .login .t-body{
     width:669px;
     height:315px;
+    /*background-color: #a4ffd5;*/
+    margin-top: 100px;
+
 }
 .jiao-back{
     text-decoration: none;
-    width: 70px;
-    height: 25px;
+    width: 100px;
+    height: 50px;
     display: block;
-    padding-left: 3px;
+    margin: 0 auto;
+    padding-left: 9px;
+    line-height: 50px;
     border: 1px solid #d4ff8e;
+    font-size:20px;
+}
+.submit{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
 }
 .jiao-back:hover{
     background-color: #545353;
     color: #fffcdd;
 }
-.west{background-image: url(../img/beijing2.jpg);
+.west{
+    /*background-image: url(../img/beijing2.jpg);*/
+
 }
 .west .discre{
         margin-left: 5px;

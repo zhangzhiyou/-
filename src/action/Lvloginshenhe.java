@@ -37,7 +37,14 @@ public class Lvloginshenhe extends HttpServlet {
          * 增加选择判断的条件
          */
         String classroom4 = request.getParameter("classrooml");
-        String applytime4 = request.getParameter("applytimel");
+        /**
+        * 对申请时间的特殊处理
+        * */
+        String applytime1 = request.getParameter("applytime1");
+        String applytime2=request.getParameter("applytime2");
+        String applytime3 = request.getParameter("applytime3");
+
+        String applytime4 =applytime1+applytime2+applytime3;
           String lemail4 = request.getParameter("email");
 //          SendEmail sendEmail = new SendEmail();
         int a=0;
@@ -57,10 +64,10 @@ public class Lvloginshenhe extends HttpServlet {
                         Lvloginshenhedao.inster1(name4, agree4, classroom4, applytime4, unit, fixedphone, phone);
                         Lvloginshenhedao.delect(name4, classroom4, applytime4);
                         //todo 如果邮箱填写，就发送邮件
-                        if(lemail4!=null) {
-                                 SendEmail sendEmail = new SendEmail();
-                                  sendEmail.lvsendemail(name4, agree4, classroom4, lemail4);//todo 发送邮件
-                        }
+//                        if(lemail4!=null) {
+//                                 SendEmail sendEmail = new SendEmail();
+//                                  sendEmail.lvsendemail(name4, agree4, classroom4, lemail4);//todo 发送邮件
+//                        }
                         request.setAttribute("error","恭喜已经审批完一条");
                         request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
                     }

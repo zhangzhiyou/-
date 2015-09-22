@@ -26,11 +26,18 @@ public class Jiaocaikeloginsubmit extends HttpServlet {
         String reason = request.getParameter("reason");
         String temail = request.getParameter("email");
         String classroom = request.getParameter("classroom");
-        String applytime = request.getParameter("applytimet");
+
+        /**
+         * 对申请使用时间处理
+         */
+        String applytime1 = request.getParameter("applytimet1");
+        String applytime2 = request.getParameter("applytimet2");
+        String applytime3 = request.getParameter("applytimet3");
+        String applytime = applytime1+applytime2+applytime3;
         String unit = request.getParameter("unit");
         String phone = request.getParameter("phone");
         String fixedphone = request.getParameter("fixedphone");
-//        Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
+       //Integer classnumber = Integer.valueOf(classroom);//将字符串强制转换成int类型
       //  String classsnumber = request.getParameter("classroom");
         txt = name3+"申请教室请审核";
         if(name3.equals("")||reason.equals("")||classroom.equals("")||applytime.equals("")||unit.equals("")){

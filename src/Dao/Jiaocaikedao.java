@@ -17,10 +17,10 @@ public class Jiaocaikedao {
         try {
             String sql = "select * from jiaocaike where name2=? and password2=?";
             pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, jiaocaike.getUsername3());
+            pstmt.setString(1, jiaocaike.getUsername3());// todo 给占位符赋值
             pstmt.setString(2, jiaocaike.getPassword3());
-            ResultSet rs = pstmt.executeQuery();
-            if(rs.next()){
+            ResultSet rs = pstmt.executeQuery();//todo 执行sql语句。并把执行后的结果存放到rs中
+            if(rs.next()){// todo 取rs中的数据
                 resultthree = new Jiaocaike();
                 resultthree.setUsername3(rs.getString("name2"));
                 resultthree.setPassword3(rs.getString("password2"));

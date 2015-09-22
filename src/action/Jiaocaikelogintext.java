@@ -19,10 +19,8 @@ public class Jiaocaikelogintext extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
        // Treelogindao threelogindao = new Treelogindao();
         Jiaocaikedao jiaocaikedao = new Jiaocaikedao();
         Link link = new Link();
