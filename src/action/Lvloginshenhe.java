@@ -20,7 +20,6 @@ import java.io.IOException;
 public class Lvloginshenhe extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 
     @Override
@@ -48,44 +47,50 @@ public class Lvloginshenhe extends HttpServlet {
           String lemail4 = request.getParameter("email");
 //          SendEmail sendEmail = new SendEmail();
         int a=0;
-        if (Jiaocaikesubmitdao.judge(name4, classroom4, applytime4, unit, phone, fixedphone) == 0) {
-            request.setAttribute("error", "您审批的该记录不在申请表中");
-            request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+        if(unit.isEmpty()||name4.isEmpty()||fixedphone.isEmpty()||phone.isEmpty()||agree4.isEmpty()||classroom4.isEmpty()||applytime4.isEmpty()||lemail4.isEmpty()){
+            request.setAttribute("error","所填选项不能为空");
+            request.getRequestDispatcher("Lvloginout.jsp").forward(request,response);
+            return;
+        }else {
+            if (Jiaocaikesubmitdao.judge(name4, classroom4, applytime4, unit, phone, fixedphone) == 0) {
+                request.setAttribute("error", "您审批的该记录不在申请表中");
+                request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
 
-        } else {
-            try {
-                if ("同意".equals(agree4)) {
-                    //     System.out.println(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)+"==========");
-                    if (Lvloginshenhedao.choosecorrect(agree4, classroom4, applytime4) > 0) {
-                        request.setAttribute("error", "该教室在该时间已被占用,您不能再同意该教室的申请");
-                        request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
-                        return;
-                    } else {
+            } else {
+                try {
+                    if ("同意".equals(agree4)) {
+                        //     System.out.println(Lvloginshenhedao.choosecorrect(agree4,classroom4,applytime4)+"==========");
+                        if (Lvloginshenhedao.choosecorrect(agree4, classroom4, applytime4) > 0) {
+                            request.setAttribute("error", "该教室在该时间已被占用,您不能再同意该教室的申请");
+                            request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+                            return;
+                        } else {
+                            Lvloginshenhedao.inster1(name4, agree4, classroom4, applytime4, unit, fixedphone, phone);
+                            Lvloginshenhedao.delect(name4, classroom4, applytime4);
+                            //todo 如果邮箱填写，就发送邮件
+                        if(lemail4!=null) {
+                                 SendEmail sendEmail = new SendEmail();
+                                  sendEmail.lvsendemail(name4, agree4, classroom4, lemail4);//todo 发送邮件
+                        }
+                            request.setAttribute("error", "恭喜已经审批完一条");
+                            request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+                        }
+                    }
+                    if ("不同意".equals(agree4)) {
                         Lvloginshenhedao.inster1(name4, agree4, classroom4, applytime4, unit, fixedphone, phone);
-                        Lvloginshenhedao.delect(name4, classroom4, applytime4);
-                        //todo 如果邮箱填写，就发送邮件
-//                        if(lemail4!=null) {
-//                                 SendEmail sendEmail = new SendEmail();
-//                                  sendEmail.lvsendemail(name4, agree4, classroom4, lemail4);//todo 发送邮件
-//                        }
-                        request.setAttribute("error","恭喜已经审批完一条");
+                        Lvloginshenhedao.delect(name4, classroom4, applytime4);//todo
+
+                        //  sendEmail.lvsendemail(name4,agree4,classroom4,lemail4);
+                        request.setAttribute("error", "恭喜已经审批完一条");
                         request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
                     }
-                }
-                if ("不同意".equals(agree4)) {
-                    Lvloginshenhedao.inster1(name4, agree4, classroom4, applytime4, unit, fixedphone, phone);
-                    Lvloginshenhedao.delect(name4, classroom4, applytime4);//todo
 
-                    //  sendEmail.lvsendemail(name4,agree4,classroom4,lemail4);
-                    request.setAttribute("error","恭喜已经审批完一条");
-                    request.getRequestDispatcher("Lvloginout.jsp").forward(request, response);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
 
-
-            } catch (Exception e) {
-                e.printStackTrace();
             }
-
         }
     }
 

@@ -4,7 +4,7 @@ th{background-color: #ff7f84;color: #000000
 }
 
 .north{height: 105px;}
-.top{width:100%;height: 100px; background: #ecf7f0
+.top{width:100%;height: 100px;
 }
 
 .top .t-sign{width:375px; height: 100px; margin-left:10px;
@@ -12,6 +12,7 @@ th{background-color: #ff7f84;color: #000000
 .centers{
     /*background-image: url(../img/beijing2.jpg)*/
     /*background-color:#a4ffd5 ;*/
+    background: #fff1c8;
 }
 
 .top .t-head{width: 559px; height: 100px; font-size: 20px;
@@ -45,6 +46,7 @@ th{background-color: #ff7f84;color: #000000
 }
 .west{
     /*background-image: url(../img/beijing2.jpg);*/
+    background:#fffcdd;
 
 }
 .west .discre{

@@ -9,17 +9,14 @@ import java.io.IOException;
 
 /**
  * Created by zhiyou on 15-4-23.
+ *
+ * 1.选择人员登录（根据从前台返回的值不同决定不同人员登录）
  */
 @WebServlet(urlPatterns = "/loging", name="loging")
 public class Ratify extends HttpServlet {
     private String login;
-
-
-//    Lvlogindao lvlogindao = new Lvlogindao();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,15 +36,6 @@ public class Ratify extends HttpServlet {
                         request.getRequestDispatcher("/Jiaocaike.jsp").forward(request,response);
                         break;
                 }
-//                if (request.getParameter("login").equals("1")) {
-//                    request.getRequestDispatcher("/Lvlogin.jsp").forward(request, response);//服务器内部转换
-//                }
-//                if(request.getParameter("login").equals("3")){
-//                    request.getRequestDispatcher("/Jiaocaike.jsp").forward(request, response);
-//                }
-//                if(request.getParameter("login").equals("2")){
-//                    request.getRequestDispatcher("/Management.jsp").forward(request,response);
-//                }
 
             }else {
                     request.setAttribute("error","请选择登录选项");

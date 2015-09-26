@@ -31,7 +31,7 @@
   <script type="text/javascript" src="vakata-jstree-2f630b4%20(2)/dist/jstree.js"></script>
 </head>
     <body class="easyui-layout">
-    <div region="north" class="north">
+    <div region="north" class="north" >
         <div  class="top">
           <div class="t-sign">
             <a href="http://www.baidu.com/s?tn=baidurt&rtt=1&bsst=1&wd=%C9%BD%B6%AB%C0%ED%B9%A4%B4%F3%D1%A7&origin=ps" style="text-decoration:none">

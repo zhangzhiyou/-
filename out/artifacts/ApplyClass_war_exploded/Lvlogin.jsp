@@ -29,7 +29,7 @@
               $(this)
                       .css("position","relative")
                       .animate({
-                          left:"+=450",
+                          left:"+=750",
                           top:"+=199"
                       })
           })
@@ -80,7 +80,7 @@
                     <p>
                         <tr>
                             <td width="40%"></td>
-                            <font color="red">${error}</font>
+                            <font class="error" color="red">${error}</font>
                         </tr>
                     </p>
                 </div>

@@ -8,6 +8,7 @@ import java.sql.ResultSetMetaData;
 
 /**
  * Created by zhiyou on 15-8-5.
+ * 自行封装JsonArray类型
  */
 public class Jsonutil {
     public static JSONArray formatRsToJsonArray(ResultSet rs) throws Exception{//JSONArry的格式都是键值对的格式name：value

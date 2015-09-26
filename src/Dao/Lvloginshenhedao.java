@@ -12,14 +12,14 @@ import java.sql.SQLException;
  * Created by zhiyou on 15-4-25.
  */
 public class Lvloginshenhedao  {
-    //todo 添加申请教室学生的名单
+
+    //todo 添加审核后的名单
     public static void inster1(String username,String agree,String classroom,String applytime,String unit,String fixedphone,String phone){
        Connection con = null;
         PreparedStatement stmt = null;
         Lvlogin lvlogin = new Lvlogin();
         try{
             lvlogin.setName1(username);
-          //  lvlogin.setNumber1(number1);
             lvlogin.setAgree(agree);
             lvlogin.setClassrooml(classroom);
             lvlogin.setApplytimel(applytime);
@@ -30,7 +30,6 @@ public class Lvloginshenhedao  {
             String sql = "insert into lvtable(username, agree,classroom,applytime,unit,fixedphone,phone) values(?, ?, ?,?,?,?,?);";
             stmt =con.prepareStatement(sql);
             stmt.setString(1,lvlogin.getName1());
-          //  stmt.setString(2,lvlogin.getNumber1());
             stmt.setString(2,lvlogin.getAgree());
             stmt.setString(3,lvlogin.getClassrooml());
             stmt.setString(4,lvlogin.getApplytimel());
@@ -46,6 +45,9 @@ public class Lvloginshenhedao  {
 
         }
     }
+
+
+
         //审核申请的学生
     public static int choosecorrect(String agree,String classroom,String applytime) throws Exception {
         int a=0;

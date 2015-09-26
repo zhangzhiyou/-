@@ -54,3 +54,8 @@
     background-color: #efd1ff;
     /*color: #fffeef;*/
 }
+.error{
+    padding-left: 66px;
+    line-height: 60px;
+    font-size: 23px;
+}

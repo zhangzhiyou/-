@@ -41,4 +41,13 @@
         <servlet-name>Examine</servlet-name>
         <url-pattern>/examineDelete</url-pattern>
     </servlet-mapping>
+    <!--审核老师审核数据-->
+    <servlet>
+        <servlet-name>Examineadd</servlet-name>
+        <servlet-class>deleteNotes.ExamineAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Examineadd</servlet-name>
+        <url-pattern>/examinAdd</url-pattern>
+    </servlet-mapping>
 </web-app>

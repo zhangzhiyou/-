@@ -28,6 +28,10 @@ table#table3{
     height: 40px;
 
 }
+#shenhe{
+    width: 100px;
+    height: 40px;
+}
 .s-teacher .s-table{width:1400px;
     background-color:bisque;}
 .head{width:100%;height:150px;background-color: #ffd1d5;
@@ -49,4 +53,8 @@ table#table3{
 
 }
 .L-back:hover{background-color: #908f8f;color: #f7f6ff;
+}
+.l-aligon{
+    margin-top: 170px;
+
 }

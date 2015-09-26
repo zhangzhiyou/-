@@ -35,27 +35,6 @@ public class Lvlogintext extends HttpServlet {
             request.getRequestDispatcher("Lvlogin.jsp").forward(request, response);//
             return;
         }
-//        if (checked != null && checked.length() > 0) {
-//            String username = URLEncoder.encode(username1, "utf-8");
-//            String password = URLEncoder.encode(password1, "utf-8");
-//            Cookie usernamecookie = new Cookie("username", username);//创建两个cookie
-//            Cookie passwordcookie = new Cookie("password", password);
-//            usernamecookie.setMaxAge(30 * 24 * 60 * 60);
-//            passwordcookie.setMaxAge(30 * 24 * 60 * 60);
-//            response.addCookie(usernamecookie);
-//            response.addCookie(passwordcookie);
-//        } else {
-//            Cookie[] cookies = request.getCookies();
-//            if (cookies != null && cookies.length > 0) {
-//                for (Cookie c : cookies) {
-//                    if (c.getName().equals("username") || c.getName().equals("password")) {
-//                        c.setMaxAge(0);
-//                        response.addCookie(c);
-//                    }
-//                }
-//            }
-//        }
-
         Lvlo lv=new Lvlo(username1,password1);
         Connection con=null;
         try{

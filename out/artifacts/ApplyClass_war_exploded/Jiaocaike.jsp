@@ -20,7 +20,7 @@
         $(this)
                 .css('position','relative')
                 .animate({
-                  left:"+=500",
+                  left:"+=750",
                   top:"+=110"
                 },
                 'slow'

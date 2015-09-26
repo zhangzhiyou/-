@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<div align="center" style="padding-top: 50px">
+<div align="center" style="padding-top: 50px ;">
   <form action="loging40000" method="post">
     <img border="0" src="img/am.jpg" width="100%" height="100%"
          style='position: absolute;left:0px;top:0px;z-index: -1'/>
