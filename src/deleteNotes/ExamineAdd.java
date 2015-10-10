@@ -16,6 +16,13 @@ import java.sql.Connection;
 
 /**
  * Created by zhiyou on 15-9-26.
+ * 该servlet完成的需求
+ *
+ *  1 完成审核人员的审核，
+ *  2.把审核的内容删除
+ *  3. 完成电子邮件的发送
+ *
+ *  与该类对审核表操作的servlet是ExmineDelete（该servlet的主要功能是可以删除多项数据数据）
  */
 public class ExamineAdd extends HttpServlet {
     Link link = new Link();

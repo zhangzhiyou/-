@@ -13,8 +13,9 @@ import java.io.IOException;
 
 /**
  * Created by zhiyou on 15-4-25.
- * 1. 审核老师审核
- * 2.
+ * 该类暂时得不到请求，
+ * 对审核处理的servlet已别转移到，deleteNots文件夹下的ExamineAdd类中处理
+ *
  */
 @WebServlet(urlPatterns = "/loging3", name = "Login3")
 public class Lvloginshenhe extends HttpServlet {

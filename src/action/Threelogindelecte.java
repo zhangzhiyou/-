@@ -12,6 +12,8 @@ import java.io.IOException;
 
 /**
  * Created by zhiyou on 15-4-27.
+ * 该servlet完成的需求
+ *  1 删除审核完的数据，支持多项删除
  */
 @WebServlet(urlPatterns = "/loging5", name = "Login5")
 public class Threelogindelecte extends HttpServlet {

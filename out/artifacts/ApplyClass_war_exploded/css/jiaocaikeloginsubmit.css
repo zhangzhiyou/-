@@ -20,7 +20,7 @@ th{background-color: #ff7f84;color: #000000
 .login .t-body{
     width:669px;
     height:315px;
-    /*background-color: #a4ffd5;*/
+
     margin-top: 100px;
 
 }
@@ -45,13 +45,12 @@ th{background-color: #ff7f84;color: #000000
     color: #fffcdd;
 }
 .west{
-    /*background-image: url(../img/beijing2.jpg);*/
     background:#fffcdd;
 
 }
 .west .discre{
         margin-left: 5px;
-        margin-top: 30px;
+        /*margin-top: 200px;*/
 }
 .west .discre p{
     text-align: center;

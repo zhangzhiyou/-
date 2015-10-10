@@ -75,6 +75,9 @@ public class Jiaocaikesubmitdao {
           stmt.executeUpdate();
     }
 
+    /**
+     * 该方法暂时没有用到
+     * */
     public static String show2()throws SQLException{
         Connection con = null;
         Statement stmt = null;
@@ -97,7 +100,7 @@ public class Jiaocaikesubmitdao {
         return str;
     }
 
-    public static int choosecorrect(String name,String classroom,String applytime) throws Exception {
+    public static int choosecorrect(String classroom,String applytime) throws Exception {
         int a=0;
         Connection con=null;
         Statement stmt = null;
@@ -105,7 +108,7 @@ public class Jiaocaikesubmitdao {
         try {
             con = Link.getCon();
             stmt = con.createStatement();
-            String sql = "select DISTINCT * from threetable where username='" +name+"' and "+"classnumber='" + classroom + "' and "+"applytime1='" + applytime+"';";
+            String sql = "select DISTINCT * from threetable where classnumber='" + classroom + "' and "+"applytime1='" + applytime+"';";
             rs = stmt.executeQuery(sql);
             while (rs.next()){
                 a++;

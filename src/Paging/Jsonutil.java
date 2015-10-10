@@ -9,6 +9,7 @@ import java.sql.ResultSetMetaData;
 /**
  * Created by zhiyou on 15-8-5.
  * 自行封装JsonArray类型
+ * 通过它put方法，可以向页面返回值,不可以直接返回，需要，需要自己定义向页面写的方法
  */
 public class Jsonutil {
     public static JSONArray formatRsToJsonArray(ResultSet rs) throws Exception{//JSONArry的格式都是键值对的格式name：value

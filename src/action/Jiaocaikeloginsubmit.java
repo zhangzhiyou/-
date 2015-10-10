@@ -11,7 +11,9 @@ import java.io.IOException;
 
 /**
  * Created by zhiyou on 15-4-25.
- *  申请人员申请教室
+ * 该类完成的需求
+ *  1 申请人员申请教室,把信息添加到申请教室的表中
+ *  2限定申请的约束条件（相同时间段內同一间教室只能被一个人申请）
  */
 @WebServlet(urlPatterns = "/loging4", name = "Login4")
 public class Jiaocaikeloginsubmit extends HttpServlet {
@@ -44,8 +46,8 @@ public class Jiaocaikeloginsubmit extends HttpServlet {
             return;
         }
         try{
-            if(Jiaocaikesubmitdao.choosecorrect(name3,classroom,applytime)>0){
-                request.setAttribute("error","请不要重复申请");
+            if(Jiaocaikesubmitdao.choosecorrect(classroom,applytime)>0){
+                request.setAttribute("error","这个时间段该教室已被别人申请");
                 request.getRequestDispatcher("Jiaocaikeloginsubmit.jsp").forward(request,response);
                 return;
             }

@@ -9,6 +9,8 @@ import java.sql.SQLException;
 
 /**
  * Created by zhiyou on 15-7-3.
+ * 功能
+ *   查询教材科登录的用户名和密码
  */
 public class Jiaocaikedao {
     public Jiaocaike login3(Connection con, Jiaocaike jiaocaike) throws SQLException {

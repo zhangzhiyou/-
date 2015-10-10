@@ -119,7 +119,6 @@
                 <table id="dg" title="申请教室审核后名单" class="easyui-datagrid" fitColumns="true"  pagination="true"
                     rownumbers="true"   url="apply_paging"  toolbar="#tb">
                     <thead>
-
                     <tr>
                         <th field="cb" checkbox="true"></th>
                         <th field="id" width="30">id</th>

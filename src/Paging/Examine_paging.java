@@ -15,6 +15,8 @@ import java.sql.Connection;
 
 /**
  * Created by zhiyou on 15-8-8.
+ *
+ * 该servlet完成提交申请分页
  */
 public class Examine_paging extends HttpServlet {
     Link link = new Link();

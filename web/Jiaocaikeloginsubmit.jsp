@@ -154,6 +154,8 @@
                       <option value="第五.六节">第五.六节</option>
                       <option value="第七.八节">第七.八节</option>
                       <option value="第九.十节">第九.十节</option>
+                      <option value="上午">上午</option>
+                      <option value="下午">下午</option>
                     </select>
                     <select name="applytimet3">
                       <option value="(第一周)">第一周</option>
@@ -204,6 +206,9 @@
      </div>
 
     <div region="west" class="west" style="width: 300px;" title="学院列单" split="true">
+      <div class="">
+
+      </div>
       <div class="discre">
         <MARQUEE class="marquee" onMouseOut = "this.start()"   onMouseOver ="this.stop()" behavior="scroll" style="line-height: 50px;height: 500px;" scrollAmount="1" scrollDelay="1" direction="up">
         <h1>

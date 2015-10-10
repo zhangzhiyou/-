@@ -14,6 +14,8 @@ import java.sql.Connection;
 
 /**
  * Created by zhiyou on 15-8-26.
+ * 功能
+ *   完成多条记录的删除
  */
 public class ManageDelete extends HttpServlet {
     Link link = new Link();

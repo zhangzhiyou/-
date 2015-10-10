@@ -60,6 +60,7 @@ public class LvshenheDao {
         return pstmt.executeQuery();
         //  return pstmt.executeQuery();//返回，转化后的值
     }
+    //计算一共有多少条记录
     public int gradeCount(Connection con) throws Exception{//获取总计录数
         String sql = "select count(*) as total from threetable";
         PreparedStatement pstmt = con.prepareStatement(sql);

@@ -22,7 +22,6 @@ public class Apply_paging extends HttpServlet {
 
         this.doPost(request,response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = request.getParameter("page");

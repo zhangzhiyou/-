@@ -15,6 +15,8 @@ import java.sql.Connection;
 
 /**
  * Created by zhiyou on 15-8-26.
+ * 该servlet完成的需求，审核老师可以同时删除多条记录
+ *
  */
 
 public class ExamineDelete extends HttpServlet {
@@ -24,7 +26,6 @@ public class ExamineDelete extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         super.doGet(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //todo deiLds参数是从Lvlogin.jsp中post方法中的第算个三个参数中得到的
