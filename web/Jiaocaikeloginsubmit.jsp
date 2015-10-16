@@ -10,7 +10,7 @@
 <head>
     <title></title>
   <%if(session.getAttribute("currentUser")==null) {
-    response.sendRedirect("Jiaocaike.jsp");
+    response.sendRedirect("index.jsp");
     return;
   }%>
   <script type="text/javascript">
@@ -18,7 +18,6 @@
       var imgEle=document.getElementById("img");
       imgEle.src="/verfi?a="+new Date().getTime();
     }
-
   </script>
 
   <link type="text/css" href="css/jiaocaikeloginsubmit.css" rel="stylesheet"/>

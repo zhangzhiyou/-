@@ -12,7 +12,7 @@
 <head>
     <title></title>
   <%if(session.getAttribute("currentUser")==null) {
-    response.sendRedirect("Management.jsp");
+    response.sendRedirect("index.jsp");
     return;
   }%>
 

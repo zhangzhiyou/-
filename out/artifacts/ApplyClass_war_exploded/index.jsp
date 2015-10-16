@@ -37,7 +37,6 @@
       })
     </script>
     <style type="text/css">
-      /*.choose{background: url("img/edusdut.jpg")}*/
     </style>
   </head>
   <body>
@@ -59,22 +58,35 @@
     </div>
     <div class="choose">
         <div class="c-login">
-            <p>
-              <span>1.审批老师登录:</span>
-              <input type="radio" class="c-radio" name="login" value='1' align="center"/>
-            </p>
           <p>
-            <span>2.教室管理员登录:</span>
-            <input type="radio" class="c-radio" name="login" value='2' align="center"/>
+            <span>用户名:</span>
+            <input type="text" class="c-radio" name="username" >
           </p>
           <p>
-            <span>3.教材科登录:</span>
-            <input type="radio" class="c-radio" name="login" value='3' align="center"/>
+            <span>密  码:</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" class="c-radio" name="password">
           </p>
+          <p class="c-p">
+
+            选择登录：
+            <input class="chooses" type="radio" name="chooses" value="审核老师">审核老师<input class="chooses" type="radio" name="chooses" value="教材科">教材科<input class="chooses" type="radio" name="chooses" value="教室管理员">教室管理管
+          </p>
+            <%--<p>--%>
+              <%--<span>1.审批老师登录:</span>--%>
+              <%--<input type="radio" class="c-radio" name="login" value='1' align="center"/>--%>
+            <%--</p>--%>
+          <%--<p>--%>
+            <%--<span>2.教室管理员登录:</span>--%>
+            <%--<input type="radio" class="c-radio" name="login" value='2' align="center"/>--%>
+          <%--</p>--%>
+          <%--<p>--%>
+            <%--<span>3.教材科登录:</span>--%>
+            <%--<input type="radio" class="c-radio" name="login" value='3' align="center"/>--%>
+          <%--</p>--%>
           <p>
             <input type="submit" class="c-submit" value="确定">
           </p>
-          <p>
+          <p class="error">
             <font color="red">${error}</font>
           </p>
         </div>

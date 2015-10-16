@@ -10,7 +10,7 @@
 <html>
 <head>
     <% if(session.getAttribute("currentUser")==null) {
-      response.sendRedirect("Lvlogin.jsp");
+      response.sendRedirect("index.jsp");
       return;
     }
     %>
