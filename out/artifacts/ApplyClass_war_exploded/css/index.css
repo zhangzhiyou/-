@@ -48,6 +48,20 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
     line-height: 67px;
 
 }
+.choose .c-login .yanzhengma{
+    width: 410px;
+    border-radius: 5px;
+    background-color:#dedad7;
+    font-size: 24px;
+}
+.choose .c-login .yanzhengma .cheak{
+    height: 60px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #acacb9;
+    font-size: 24px;
+}
+
 .choose .c-login .chooses{
     width: 18px;
     height: 18px;

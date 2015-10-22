@@ -50,4 +50,25 @@
         <servlet-name>Examineadd</servlet-name>
         <url-pattern>/examinAdd</url-pattern>
     </servlet-mapping>
-</web-app>
+
+
+    <!-- 登陆时验证码验证-->
+        <!--<servlet>-->
+        <!--<servlet-name>PictureCheckCode</servlet-name>-->
+        <!--<servlet-class>verification.PictureCheckCode</servlet-class>-->
+        <!--</servlet>-->
+        <!--<servlet-mapping>-->
+        <!--<servlet-name>PictureCheckCode</servlet-name>-->
+        <!--<url-pattern>/PictureCheckCode</url-pattern>-->
+        <!--</servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>DrawImage</servlet-name>
+        <servlet-class>verification.DrawImage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DrawImage</servlet-name>
+        <url-pattern>/DrawImage</url-pattern>
+    </servlet-mapping>
+
+        </web-app>

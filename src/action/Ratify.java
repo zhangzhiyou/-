@@ -37,6 +37,13 @@ public class Ratify extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String choose = request.getParameter("chooses");
+
+        //todo 从客户端获取图片的上的验证码
+        String serverCheckcode = (String)request.getSession().getAttribute("checkcode");
+        String checkCode =  request.getParameter("checkCode");
+
+
+
         /**
          * 判断以什么身份登录
          *  1.审核人员
@@ -51,7 +58,7 @@ public class Ratify extends HttpServlet {
         if (choose == null || choose.length() <= 0) {
             request.setAttribute("error", "请选择登录");
             request.getRequestDispatcher("index.jsp").forward(request, response);
-            return;
+
 
         } else {
             if (choose.equals("审核老师")) {
@@ -69,10 +76,18 @@ public class Ratify extends HttpServlet {
                     if (currentUser == null) {
                         request.setAttribute("error", "用户名或密码错误");
                         request.getRequestDispatcher("index.jsp").forward(request, response);
+                        return;
+
                     } else {
-                        HttpSession session1 = request.getSession();
-                        session1.setAttribute("currentUser", currentUser);
-                        response.sendRedirect("Lvloginout.jsp");
+
+                        if(serverCheckcode.equals(checkCode)) {
+                            HttpSession session1 = request.getSession();
+                            session1.setAttribute("currentUser", currentUser);
+                            response.sendRedirect("Lvloginout.jsp");
+                        }else {
+                            request.setAttribute("error", "请正确输入验证码");
+                            request.getRequestDispatcher("index.jsp").forward(request, response);
+                        }
                     }
 
                 } catch (Exception e) {
@@ -87,7 +102,6 @@ public class Ratify extends HttpServlet {
                     }
                 }
             }
-
             /**
              * 教材科登录验证
              * */
@@ -106,9 +120,14 @@ public class Ratify extends HttpServlet {
                         request.setAttribute("error", "用户名或密码错误");
                         request.getRequestDispatcher("index.jsp").forward(request, response);
                     } else {
-                        HttpSession session1 = request.getSession();
-                        session1.setAttribute("currentUser", currentUser);
-                        response.sendRedirect("Jiaocaikeloginsubmit.jsp");
+                        if(serverCheckcode.equals(checkCode)) {
+                            HttpSession session1 = request.getSession();
+                            session1.setAttribute("currentUser", currentUser);
+                            response.sendRedirect("Jiaocaikeloginsubmit.jsp");
+                        }else {
+                            request.setAttribute("error", "请正确输入验证码");
+                            request.getRequestDispatcher("index.jsp").forward(request, response);
+                        }
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -143,9 +162,14 @@ public class Ratify extends HttpServlet {
                         request.setAttribute("error", "用户名或密码错误");
                         request.getRequestDispatcher("Management.jsp").forward(request, response);
                     } else {
-                        HttpSession session1 = request.getSession();
-                        session1.setAttribute("currentUser", currentUser);
-                        response.sendRedirect("threedelete.jsp");
+                        if(serverCheckcode.equals(checkCode)) {
+                            HttpSession session1 = request.getSession();
+                            session1.setAttribute("currentUser", currentUser);
+                            response.sendRedirect("threedelete.jsp");
+                        }else {
+                            request.setAttribute("error", "请正确输入验证码");
+                            request.getRequestDispatcher("index.jsp").forward(request, response);
+                        }
                     }
 
                 } catch (Exception e) {
