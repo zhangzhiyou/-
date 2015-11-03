@@ -11,7 +11,8 @@ import java.sql.SQLException;
  * Created by zhiyou on 15-4-23.
  */
 public class Lvlogindao {
-    public Lvlo login1(Connection con, Lvlo lv) throws SQLException {
+    public  Lvlo login1(Connection con, Lvlo lv) throws SQLException {
+
         Lvlo resultLvlo = null;
         PreparedStatement pstmt = null;
         try {

@@ -42,8 +42,6 @@ public class Ratify extends HttpServlet {
         String serverCheckcode = (String)request.getSession().getAttribute("checkcode");
         String checkCode =  request.getParameter("checkCode");
 
-
-
         /**
          * 判断以什么身份登录
          *  1.审核人员
@@ -150,7 +148,7 @@ public class Ratify extends HttpServlet {
             if (choose.equals("教室管理员")) {
                 if (username.isEmpty() || password.isEmpty()) {
                     request.setAttribute("error", "用户名或密码不能为空");
-                    request.getRequestDispatcher("Management.jsp").forward(request, response);
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
                     return;
                 }
                 Three three = new Three(username, password);
@@ -160,7 +158,7 @@ public class Ratify extends HttpServlet {
                     Three currentUser = treelogindao.login2(con, three);
                     if (currentUser == null) {
                         request.setAttribute("error", "用户名或密码错误");
-                        request.getRequestDispatcher("Management.jsp").forward(request, response);
+                        request.getRequestDispatcher("index.jsp").forward(request, response);
                     } else {
                         if(serverCheckcode.equals(checkCode)) {
                             HttpSession session1 = request.getSession();

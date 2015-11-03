@@ -21,7 +21,9 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
 }
 .choose .c-login{width:400px;
     height:450px;
-    position:absolute; top:1px;left: 1px;}
+    position:absolute;
+    top:199px;
+    left: 750px;}
 .choose .c-login p{width:300px;height:60px;
     background: #c7c7d6;border-radius:5px;
     float:left;
@@ -49,7 +51,7 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
 
 }
 .choose .c-login .yanzhengma{
-    width: 410px;
+    width: 547px;
     border-radius: 5px;
     background-color:#dedad7;
     font-size: 24px;
@@ -60,6 +62,10 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
     border-radius: 5px;
     background-color: #acacb9;
     font-size: 24px;
+}
+.choose .c-login #c-change{
+    cursor:pointer;
+
 }
 
 .choose .c-login .chooses{

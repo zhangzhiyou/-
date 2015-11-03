@@ -24,26 +24,21 @@
     <script type="text/javascript" src="jquery-easyui-1.3.6/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript">
       function myReload() {
-        document.getElementById("CreateCheckCode").src = document
-                .getElementById("CreateCheckCode").src
-        + "?nocache=" + new Date().getTime();
+        document.getElementById("CreateCheckCode").src = document.getElementById("CreateCheckCode").src + "?nocache=" + new Date().getTime();
       }
-      $(function(){
-        $('.c-login').each(function(){
-          $(this)
-                  .css('position','relative')
-                  .animate({
-                    left:"+=750",
-                    top:"+=199"
-                  },
-              'slow'
-          )
-        })
-      })
+//      $(function(){
+//        $('.c-login').each(function(){
+//          $(this)
+//                  .css('position','relative')
+//                  .animate({
+//                    left:"+=750",
+//                    top:"+=199"
+//                  },
+//              'slow'
+//          )
+//        })
+//      })
     </script>
-    <%--<script language="javascript">--%>
-     <%----%>
-    <%--</script>--%>
     <style type="text/css">
     </style>
   </head>
@@ -76,13 +71,13 @@
           </p>
           <p class="c-p">
             选择登录：
-            <input class="chooses" type="radio" name="chooses" value="审核老师">审核老师<input class="chooses" type="radio" name="chooses" value="教材科">教材科<input class="chooses" type="radio" name="chooses" value="教室管理员">教室管理管
+            <input class="chooses" checked="checked" type="radio" name="chooses" value="审核老师">审核老师<input class="chooses" type="radio" name="chooses" value="教材科">教材科<input class="chooses" type="radio" name="chooses" value="教室管理员">教室管理员
           </p>
           <p class="yanzhengma">
             验证码：<input name="checkCode" class="cheak" type="text" id="checkCode" title="验证码区分大小写"
-                   size="8" ,maxlength="4" />
+                   size="8" ,maxlength="4"/>
             <img src="DrawImage" id="CreateCheckCode" align="middle">
-            <a href="" onclick="myReload()">换一个</a>
+            <a  id="c-change" onclick="myReload()">换一个(全是大写)</a>
           </p>
           <p>
             <input type="submit" class="c-submit" value="确定">
