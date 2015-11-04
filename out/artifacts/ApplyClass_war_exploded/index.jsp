@@ -26,18 +26,6 @@
       function myReload() {
         document.getElementById("CreateCheckCode").src = document.getElementById("CreateCheckCode").src + "?nocache=" + new Date().getTime();
       }
-//      $(function(){
-//        $('.c-login').each(function(){
-//          $(this)
-//                  .css('position','relative')
-//                  .animate({
-//                    left:"+=750",
-//                    top:"+=199"
-//                  },
-//              'slow'
-//          )
-//        })
-//      })
     </script>
     <style type="text/css">
     </style>
@@ -75,12 +63,12 @@
           </p>
           <p class="yanzhengma">
             验证码：<input name="checkCode" class="cheak" type="text" id="checkCode" title="验证码区分大小写"
-                   size="8" ,maxlength="4" />
+                   size="8" ,maxlength="4"/>
             <img src="DrawImage" id="CreateCheckCode" align="middle">
             <a  id="c-change" onclick="myReload()">换一个(全是大写)</a>
           </p>
           <p>
-            <input type="submit" class="c-submit" value="确定">
+            <input style="cursor: pointer" type="submit" class="c-submit" value="确定">
           </p>
           <p class="error">
             <font color="red">${error}</font>

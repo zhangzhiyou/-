@@ -26,8 +26,8 @@ public class LvshenheDao {
             String tphone = rs.getString(6);
             String tfixedphone = rs.getString(7);
             //todo 发送电子邮件
-//            SendEmail sendEmail = new SendEmail();
-//            sendEmail.lvsendemail(tusername,agree,tclassnumber,temail);
+            SendEmail sendEmail = new SendEmail();
+            sendEmail.lvsendemail(tusername,agree,tclassnumber,temail);
 
            String sql1="insert into lvtable(username,agree,classroom,applytime,unit,fixedphone,phone) values(?,?,?,?,?,?,?)";
             PreparedStatement pstmt1=con.prepareStatement(sql1);

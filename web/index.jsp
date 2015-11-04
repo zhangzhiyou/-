@@ -26,18 +26,6 @@
       function myReload() {
         document.getElementById("CreateCheckCode").src = document.getElementById("CreateCheckCode").src + "?nocache=" + new Date().getTime();
       }
-//      $(function(){
-//        $('.c-login').each(function(){
-//          $(this)
-//                  .css('position','relative')
-//                  .animate({
-//                    left:"+=750",
-//                    top:"+=199"
-//                  },
-//              'slow'
-//          )
-//        })
-//      })
     </script>
     <style type="text/css">
     </style>
@@ -80,7 +68,7 @@
             <a  id="c-change" onclick="myReload()">换一个(全是大写)</a>
           </p>
           <p>
-            <input type="submit" class="c-submit" value="确定">
+            <input style="cursor: pointer" type="submit" class="c-submit" value="确定">
           </p>
           <p class="error">
             <font color="red">${error}</font>

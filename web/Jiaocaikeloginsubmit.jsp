@@ -47,8 +47,7 @@
         <div align="center"  class="login">
           <form action="loging4" method="post">
            <div class="t-body" align="center">
-            <table class="table">
-
+            <table class="table" style="color: #060607">
 
               <tr>
                 <td width="20%"></td>
@@ -95,7 +94,7 @@
               <tr>
                 <td width="20%"></td>
                 <td width="10%" class="t-login">邮箱：</td>
-                <td><input type="text" name="email" validType="email" class="easyui-validatebox"></td>
+                <td><input type="text" name="email" validType="email" placeholder="用于查看审核后的结果" class="easyui-validatebox"></td>
                 <td width="30%"></td>
               </tr>
               <tr></tr>
@@ -137,6 +136,28 @@
                   <font class="t-login"> 使用时间：</font>
                 </td>
                 <td>
+                  <select name="applytimet3">
+                    <option value="(第一周)">第一周</option>
+                    <option value="(第二周)">第二周</option>
+                    <option value="(第三周)">第三周</option>
+                    <option value="(第四周)">第四周</option>
+                    <option value="(第五周)">第五周</option>
+                    <option value="(第六周)">第六周</option>
+                    <option value="(第七周)">第七周</option>
+                    <option value="(第八周)">第八周</option>
+                    <option value="(第九周)">第九周</option>
+                    <option value="(第十周)">第十周</option>
+                    <option value="(第十一周)">第十一周</option>
+                    <option value="(第十二周)">第十二周</option>
+                    <option value="(第十三周)">第十三周</option>
+                    <option value="(第十四周)">第十四周</option>
+                    <option value="(第十五周">第十五周</option>
+                    <option value="(第十六周)">第十六周</option>
+                    <option value="(第十七周)">第十七周</option>
+                    <option value="(第十八周)">第十八周</option>
+                    <option value="(第十九周)">第十九周</option>
+                    <option value="(第二十周)">第二十周</option>
+                  </select>
                   <%--<input type="text" name="applytimet" placeholder="周一 三四节(第一周)">--%>
                   <select name="applytimet1">
                     <option value="周一">周一</option>
@@ -156,28 +177,7 @@
                       <option value="上午">上午</option>
                       <option value="下午">下午</option>
                     </select>
-                    <select name="applytimet3">
-                      <option value="(第一周)">第一周</option>
-                      <option value="(第二周)">第二周</option>
-                      <option value="(第三周)">第三周</option>
-                      <option value="(第四周)">第四周</option>
-                      <option value="(第五周)">第五周</option>
-                      <option value="(第六周)">第六周</option>
-                      <option value="(第七周)">第七周</option>
-                      <option value="(第八周)">第八周</option>
-                      <option value="(第九周)">第九周</option>
-                      <option value="(第十周)">第十周</option>
-                      <option value="(第十一周)">第十一周</option>
-                      <option value="(第十二周)">第十二周</option>
-                      <option value="(第十三周)">第十三周</option>
-                      <option value="(第十四周)">第十四周</option>
-                      <option value="(第十五周">第十五周</option>
-                      <option value="(第十六周)">第十六周</option>
-                      <option value="(第十七周)">第十七周</option>
-                      <option value="(第十八周)">第十八周</option>
-                      <option value="(第十九周)">第十九周</option>
-                      <option value="(第二十周)">第二十周</option>
-                    </select>
+
                 </td>
                 <td width="30%"></td>
               </tr>
@@ -186,7 +186,7 @@
               <tr>
                 <td width="40%"></td>
                 <td><input class="submit" type="submit" value="提交"></td>
-                <td ><a class="jiao-back" href="Jiaocaike.jsp">返回上级</a></td>
+                <td ><a class="jiao-back" href="index.jsp">返回上级</a></td>
                 <td width="30%"></td>
               </tr>
               <tr></tr>

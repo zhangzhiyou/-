@@ -17,10 +17,8 @@ public class Link {
      * @throws Exception
      */
     public static Connection getCon() throws Exception{
-
         Class.forName("com.mysql.jdbc.Driver");//注册驱动
         Connection con= DriverManager.getConnection(url);//建立链接
-
         return con;
     }
 

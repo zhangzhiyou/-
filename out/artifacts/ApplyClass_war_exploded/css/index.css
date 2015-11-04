@@ -80,4 +80,5 @@ body{font-size:12px;font-family:"微软雅黑";color:#666}
 .choose .c-login .error{
     font-size: 24px;
     line-height: 60px;
+    background-color: #dedad7 ;
 }

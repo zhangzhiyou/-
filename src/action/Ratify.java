@@ -56,131 +56,25 @@ public class Ratify extends HttpServlet {
         if (choose == null || choose.length() <= 0) {
             request.setAttribute("error", "请选择登录");
             request.getRequestDispatcher("index.jsp").forward(request, response);
-
-
         } else {
             if (choose.equals("审核老师")) {
+                LvloginVerify lvloginVerify = new LvloginVerify();
+                lvloginVerify.verify(username,password,serverCheckcode,checkCode,request,response,link,lvlogindao);
 
-                if (username.isEmpty() || password.isEmpty()) {
-                    request.setAttribute("error", "用户名或密码为空");
-                    request.getRequestDispatcher("index.jsp").forward(request, response);//
-                    return;
-                }
-                Lvlo lv = new Lvlo(username, password);
-                Connection con = null;
-                try {
-                    con = link.getCon();//链接数据库
-                    Lvlo currentUser = lvlogindao.login1(con, lv);
-                    if (currentUser == null) {
-                        request.setAttribute("error", "用户名或密码错误");
-                        request.getRequestDispatcher("index.jsp").forward(request, response);
-                        return;
-
-                    } else {
-
-                        if(serverCheckcode.equals(checkCode)) {
-                            HttpSession session1 = request.getSession();
-                            session1.setAttribute("currentUser", currentUser);
-                            response.sendRedirect("Lvloginout.jsp");
-                        }else {
-                            request.setAttribute("error", "请正确输入验证码");
-                            request.getRequestDispatcher("index.jsp").forward(request, response);
-                        }
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-
-                } finally {
-                    try {
-                        link.closeCon(con);
-                    } catch (Exception e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
             }
             /**
              * 教材科登录验证
              * */
-            Jiaocaikedao jiaocaikedao = new Jiaocaikedao();
             if (choose.equals("教材科")) {
-                if (username.isEmpty() || password.isEmpty()) {
-                    request.setAttribute("error", "用户名和密码不能为空");
-                    request.getRequestDispatcher("index.jsp").forward(request, response);
-                }
-                Jiaocaike jiaocaike = new Jiaocaike(username, password);
-                Connection con = null;
-                try {
-                    con = link.getCon();
-                    Jiaocaike currentUser = jiaocaikedao.login3(con, jiaocaike);
-                    if (currentUser == null) {
-                        request.setAttribute("error", "用户名或密码错误");
-                        request.getRequestDispatcher("index.jsp").forward(request, response);
-                    } else {
-                        if(serverCheckcode.equals(checkCode)) {
-                            HttpSession session1 = request.getSession();
-                            session1.setAttribute("currentUser", currentUser);
-                            response.sendRedirect("Jiaocaikeloginsubmit.jsp");
-                        }else {
-                            request.setAttribute("error", "请正确输入验证码");
-                            request.getRequestDispatcher("index.jsp").forward(request, response);
-                        }
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        link.closeCon(con);
-                    } catch (Exception e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-
+                JiaocaikeLoginVerify jiaocaikeLoginVerify = new JiaocaikeLoginVerify();
+                jiaocaikeLoginVerify.verify(username,password,serverCheckcode,checkCode,request,response,link);
             }
             /**
              * 教室管理员登录验证
              * */
-            Treelogindao treelogindao = new Treelogindao();
             if (choose.equals("教室管理员")) {
-                if (username.isEmpty() || password.isEmpty()) {
-                    request.setAttribute("error", "用户名或密码不能为空");
-                    request.getRequestDispatcher("index.jsp").forward(request, response);
-                    return;
-                }
-                Three three = new Three(username, password);
-                Connection con = null;
-                try {
-                    con = Link.getCon();
-                    Three currentUser = treelogindao.login2(con, three);
-                    if (currentUser == null) {
-                        request.setAttribute("error", "用户名或密码错误");
-                        request.getRequestDispatcher("index.jsp").forward(request, response);
-                    } else {
-                        if(serverCheckcode.equals(checkCode)) {
-                            HttpSession session1 = request.getSession();
-                            session1.setAttribute("currentUser", currentUser);
-                            response.sendRedirect("threedelete.jsp");
-                        }else {
-                            request.setAttribute("error", "请正确输入验证码");
-                            request.getRequestDispatcher("index.jsp").forward(request, response);
-                        }
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        link.closeCon(con);
-                    } catch (Exception e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-
+                ThreeLoginVerify threeLoginVerify = new ThreeLoginVerify();
+                threeLoginVerify.verify(username,password,serverCheckcode,checkCode,request,response,link);
 
             }
         }
