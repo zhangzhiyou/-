@@ -122,7 +122,7 @@
                         <th field="reason" width="110">理由</th>
                         <th field="classnumber" width="25">教室</th>
                         <th field="applytime1" width="95">申请时间</th>
-                        <th field="temail" width="100">邮箱</th>
+                        <%--<th field="temail" width="100">邮箱</th>--%>
                         <th field="unit" width="90">学院</th>
                         <th field="phone" width="60">个人电话</th>
                         <th field="fixedphone" width="60">单位电话</th>

@@ -1,4 +1,4 @@
-<%@ page import="Dao.Lvloginshenhedao" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: zhiyou
@@ -56,7 +56,7 @@
              $.messager.confirm("系统提示","您确定要删除<font color='red'>"+selectedRows.length+"</font>条信息吗",function(r){
                  if(r){
                      //todo 通过post方法向业务逻辑类传递参数，
-                     // todo post方法参数 1.业务逻辑类，2.前台传过去的参数，（是键值对），到后太更具键来获取值。 3,一个自定义函数，（用于给用户一些提示信息）。4,后台服务器可以相应的数据类型（主要有，xml，scrip,json,html）
+                     // todo post方法参数 1.业务逻辑类，2.前台传过去的参数，（是键值对），到后太根据键来获取值。 3,一个自定义函数，（用于给用户一些提示信息）。4,后台服务器可以相应的数据类型（主要有，xml，scrip,json,html）
                      $.post("grateDelete",{deiLds:ids},function(result){
                          if(result.success){//如果删除成功给出提示并且刷新#dg表
                              $.messager.alert("系统提示","您已成功删除<font color='red'>"+result.delNums+"</font>条记录");
@@ -95,11 +95,10 @@
      </table>
     </div>
      <!--todo 被注解的内容-->
-     <%--<%=Lvloginshenhedao.show1()%>--%>
 
      <br/>
     <!--todo 开始注释-->
-   <form  action="loging5" method="post">
+
      <div class="t-delect">
       <table id="table1">
       <tr>
@@ -116,7 +115,6 @@
       </table>
     <!--todo 注释结束-->
        </div>
-    </form>
 
 </body>
 </html>
