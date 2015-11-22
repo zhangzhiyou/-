@@ -50,15 +50,12 @@ public class LvshenheDao {
     }
 
     public ResultSet gradelist (Connection con, Pagebean pagebean) throws SQLException {
-
-
         StringBuilder sb = new StringBuilder("select * from lvtables");//表示从数据库中查到的所有的内容反转，然后形成新的字符串sb
         if(pagebean!=null){
             sb.append(" limit "+pagebean.getStart()+","+pagebean.getRows());
         }
         PreparedStatement pstmt = con.prepareStatement(sb.toString());//把的append追加的值转换成toString类型
         return pstmt.executeQuery();
-        //  return pstmt.executeQuery();//返回，转化后的值
     }
     //计算一共有多少条记录
     public int gradeCount(Connection con) throws Exception{//获取总计录数

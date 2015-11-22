@@ -1,5 +1,6 @@
 package Dao;
 
+import Paging.Pagebean;
 import model.Three;
 
 import java.sql.*;
@@ -29,4 +30,36 @@ public class Treelogindao {
         }
         return resultthree;
     }
-}
+    public ResultSet threelist(Connection con, Pagebean pagebean) throws SQLException {
+        StringBuffer sb = new StringBuffer("select * from three");
+        if(pagebean!=null){
+            sb.append(" limit "+pagebean.getStart()+","+pagebean.getRows());
+        }
+        PreparedStatement prmt = con.prepareStatement(sb.toString());
+        return prmt.executeQuery();
+    }
+
+    /***
+     * 统计一共多少条申请数据
+     * */
+    public int threeCount(Connection con) throws SQLException {
+        String sql = "select count(*) as total from three";
+        PreparedStatement premt = con.prepareStatement(sql);
+        ResultSet rs = premt.executeQuery();
+        if(rs.next()){
+            return rs.getInt("total");
+        }
+      else {
+            return 0;
+        }
+    }
+
+    /***
+     * 删除审核用户
+     * */
+        public int threedelete(Connection con , String deiLds) throws Exception {
+            String sql = "delete from three where id in("+deiLds+")";
+            PreparedStatement premt = con.prepareStatement(sql);
+            return premt.executeUpdate();
+        }
+ }

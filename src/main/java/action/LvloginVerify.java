@@ -42,10 +42,12 @@ public class LvloginVerify {
                     HttpSession session1 = request.getSession();
                     session1.setAttribute("currentUser", currentUser);
                     response.sendRedirect("Lvloginout.jsp");
-                }else {
+                }else{
                     request.setAttribute("error", "请正确输入验证码");
                     request.getRequestDispatcher("index.jsp").forward(request, response);
+                    return;
                 }
+
             }
 
 //        } catch (Exception e) {

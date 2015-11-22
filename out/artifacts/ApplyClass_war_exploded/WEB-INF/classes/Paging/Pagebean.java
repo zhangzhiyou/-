@@ -33,7 +33,7 @@ public class Pagebean {
         return (page-1)*rows;
     }
 
-    public void setStart(int start) {
+    public void setStart(int start){
         this.start = start;
     }
 }

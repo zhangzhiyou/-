@@ -19,7 +19,6 @@ public class Apply_paging extends HttpServlet {
     LvshenheDao lvshenheDao = new LvshenheDao();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         this.doPost(request,response);
     }
     @Override

@@ -83,7 +83,14 @@ public class Ratify extends HttpServlet {
                 threeLoginVerify.verify(username,password,serverCheckcode,checkCode,request,response,link);
 
             }
-        }
+            /**
+             * 超级管理员登陆
+             * */
+            if(choose.equals("管理员登陆")){
+                AdministratorVerify administratorVerify = new AdministratorVerify();
+                administratorVerify.verify(username,password,serverCheckcode,checkCode,request,response);
+            }
+         }
 
     }
 }

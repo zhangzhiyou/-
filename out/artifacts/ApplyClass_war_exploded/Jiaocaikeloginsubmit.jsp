@@ -55,15 +55,13 @@
                 <td><input type="text"  name="name2" placeholder="张三"></td>
                 <td width="30%"></td>
               </tr>
-
               <tr></tr>
               <tr>
                 <td width="20%"></td>
                 <td width="10%" class="t-login">单位电话：</td>
-                <td><input type="text"  name="fixedphone" placeholder="123456"></td>
+                <td><input type="text" name="fixedphone" placeholder="123456"></td>
                 <td width="30%"></td>
               </tr>
-
               <tr></tr>
               <tr>
                 <td width="20%"></td>
@@ -205,9 +203,7 @@
      </div>
 
     <div region="west" class="west" style="width: 300px;" title="学院列单" split="true">
-      <div class="">
 
-      </div>
       <div class="discre">
         <MARQUEE class="marquee" onMouseOut = "this.start()"   onMouseOver ="this.stop()" behavior="scroll" style="line-height: 50px;height: 500px;" scrollAmount="1" scrollDelay="1" direction="up">
         <h1>

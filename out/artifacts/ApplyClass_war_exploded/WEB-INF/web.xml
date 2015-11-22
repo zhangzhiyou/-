@@ -51,7 +51,7 @@
         <url-pattern>/examinAdd</url-pattern>
     </servlet-mapping>
 
-
+    <!--验证码图片的生成 src-->
     <servlet>
         <servlet-name>DrawImage</servlet-name>
         <servlet-class>verification.DrawImage</servlet-class>
@@ -60,5 +60,23 @@
         <servlet-name>DrawImage</servlet-name>
         <url-pattern>/DrawImage</url-pattern>
     </servlet-mapping>
+    <!--审核老师用户删除-->
+    <servlet>
+        <servlet-name>threedelete</servlet-name>
+        <servlet-class>deleteNotes.ThreeDelete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>threedelete</servlet-name>
+        <url-pattern>/manageUser/threedelect</url-pattern>
+    </servlet-mapping>
 
+    <!--审核老师用户列表-->
+    <servlet>
+        <servlet-name>Three</servlet-name>
+        <servlet-class>Paging.Three_paging</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Three</servlet-name>
+        <url-pattern>/manageUser/three_paging</url-pattern>
+    </servlet-mapping>
 </web-app>

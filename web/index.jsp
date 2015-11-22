@@ -59,10 +59,13 @@
           </p>
           <p class="c-p">
             选择登录：
-            <input class="chooses" checked="checked" type="radio" name="chooses" value="审核老师">审核老师<input class="chooses" type="radio" name="chooses" value="教材科">教材科<input class="chooses" type="radio" name="chooses" value="教室管理员">教室管理员
+            <input class="chooses" checked="checked" type="radio" name="chooses" value="审核老师">审核老师
+            <input class="chooses" type="radio" name="chooses" value="教材科">教材科
+            <input class="chooses" type="radio" name="chooses" value="教室管理员">教室管理员
+            <input class="chooses" type="radio" name="chooses" value="管理员登陆">系统管理员
           </p>
-          <p class="yanzhengma">
-            验证码：<input name="checkCode" class="cheak" type="text" id="checkCode" title="验证码区分大小写"
+          <p class="yanzhengma">验证码：
+            <input name="checkCode" class="cheak" type="text" id="checkCode" title="验证码区分大小写"
                    size="8" ,maxlength="4"/>
             <img src="DrawImage" id="CreateCheckCode" align="middle">
             <a  id="c-change" onclick="myReload()">换一个(全是大写)</a>

@@ -9,12 +9,6 @@ table#table3{
 
  }
 
- /*#table3 td input{*/
-     /*width: 237px;*/
-     /*height: 43px;*/
-     /*font-size: 18px;*/
- /*}*/
-
  #table3 .confirm{
      width: 100px;
      height: 40px;
@@ -24,19 +18,19 @@ table#table3{
      width: 400px;
  }
 #delete{
-    width: 100px;
-    height: 40px;
+    width: 66px;
+    height: 29px;
 
 }
 #shenhe{
-    width: 100px;
-    height: 40px;
+    width: 66px;
+    height: 29px;
 }
-.s-teacher .s-table{width:1400px;
-    background-color:bisque;}
+.s-teacher .s-table{width:100%;
+   }
 .head{width:100%;height:150px;background-color: #ffd1d5;
     margin: 0 auto;position:relative; }
-.head .h-logo .h-chain{width:1000px;height:150px;
+.head .h-logo .h-chain{width:100%;height:150px;
     margin:0 auto;}
 .s-teacher{ width:100%;height:100%; position:absolute;
     padding-top:5px;}
@@ -45,11 +39,11 @@ table#table3{
     float: right;padding-top: 20px;padding-right: 320px;}
 .L-back{
     text-decoration:none;
-    width: 100px;
-    height:40px;
+    width: 66px;
+    height:29px;
     border: 1px solid #908f8f;
     display: block;
-    font-size: 24px;
+    font-size: 16px;
 
 }
 .L-back:hover{background-color: #908f8f;color: #f7f6ff;
@@ -59,5 +53,5 @@ table#table3{
 
 }
 .agree1{
-    width: 18px;height: 18px
+    width: 14px;height: 14px
 }

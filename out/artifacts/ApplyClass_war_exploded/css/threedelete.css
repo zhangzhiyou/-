@@ -11,10 +11,10 @@ table#table1{
 margin: 30px auto;
 }
 #delete{
-    width: 65px;
-    height: 35px;
-    padding-left: 10px;
-    padding-top: 10px;
+    width: 55px;
+    height: 26px;
+    padding-left: 4px;
+    padding-top: 4px;
     border: 1px solid #000000;
 
 }
@@ -26,14 +26,14 @@ margin: 30px auto;
 }
 .Th-back{
     text-decoration:none;
-    width:64px;
-    height:47px;
+    width:50px;
+    height:30px;
     display:block;
-    line-height: 49px;
-   padding-left: 23px;
+    line-height: 30px;
+   padding-left: 15px;
     border-radius: 4px;
     border: 1px solid #000000;
-    font-size: 18px;
+    font-size: 16px;
 }
 .Th-back:hover{
     background-color: #c7c3c3;

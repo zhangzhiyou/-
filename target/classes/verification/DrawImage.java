@@ -17,7 +17,7 @@ public class DrawImage extends HttpServlet {
     private static final long serialVersionUID = 3038623696184546092L;
 
                  public static final int WIDTH = 130;//生成的图片的宽度
-                 public static final int HEIGHT = 50;//生成的图片的高度
+                 public static final int HEIGHT = 40;//生成的图片的高度
                  public void doGet(HttpServletRequest request, HttpServletResponse response)
                  throws ServletException, IOException {
                  this.doPost(request, response);

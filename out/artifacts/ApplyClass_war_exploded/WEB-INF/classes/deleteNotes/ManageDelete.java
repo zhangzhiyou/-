@@ -28,6 +28,7 @@ public class ManageDelete extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String deiLds = request.getParameter("deiLds");
+        System.out.println("111111"+deiLds);
         Connection con = null;
         try{
             con=link.getCon();

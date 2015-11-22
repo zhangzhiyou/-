@@ -14,7 +14,7 @@
       return;
     }
     %>
-    <script type="text/javascript">//页面index.jsp页面会被加载到但前页面
+    <script type="text/javascript">//页面index.jsp页面会被加载到当前页面
         function sayScript(){
             alert("<\/script>")//"\表示转意字符"
         }
@@ -33,7 +33,7 @@
         $(document).ready(function(){
             $("#delete").click(function(){
                 var selectedRows = $("#dg").datagrid('getSelections');
-                alert(selectedRows);
+//                alert(selectedRows);
                 if(selectedRows.length==0){
                     $.messager.alert("系统提示","请选择要删除的项");
                     return;
@@ -83,14 +83,6 @@
             })
         })
     </script>
-    <style>
-       .s-table #dg tr:nth-of-type(even){
-           background-color: #edf3cf;
-        }
-        .s-table #dg tr:nth-of-type(odd){
-            background-color: #a7a7a7;
-        }
-    </style>
 </head>
 <body>
 <!--todo 被移到下面-->
@@ -122,7 +114,6 @@
                         <th field="reason" width="110">理由</th>
                         <th field="classnumber" width="25">教室</th>
                         <th field="applytime1" width="95">申请时间</th>
-                        <%--<th field="temail" width="100">邮箱</th>--%>
                         <th field="unit" width="90">学院</th>
                         <th field="phone" width="60">个人电话</th>
                         <th field="fixedphone" width="60">单位电话</th>
@@ -132,7 +123,6 @@
                         </th>
                     </tr>
                     </thead>
-
                 </table>
             </div>
                 <div class="l-aligon">

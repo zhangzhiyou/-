@@ -33,9 +33,14 @@ public class ManageDao {
             return 0;
         }
     }
+
+    /**
+     * 删除审核完的记录
+     * */
     public int gradeDelete(Connection con,String delIds)throws Exception{
         String sql = "delete from threetable where id in("+delIds+")";
         PreparedStatement psmtp = con.prepareStatement(sql);
         return psmtp.executeUpdate();
     }
+
 }
