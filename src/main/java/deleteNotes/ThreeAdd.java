@@ -1,8 +1,8 @@
 package deleteNotes;
 
-import Dao.Link;
 import Dao.Treelogindao;
 import Paging.Responsutil;
+import model.Three;
 import net.sf.json.JSONObject;
 
 import javax.servlet.ServletException;
@@ -10,32 +10,40 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
 
 /**
- * Created by zhiyou on 15-11-22.
+ * Created by zhiyou on 15-11-24.
  */
-public class ThreeDelete extends HttpServlet {
+public class ThreeAdd extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doGet(request, response);
+        super.doGet(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String deiLds = request.getParameter("deiLds");
-        Connection con=null;
+       String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        Three three = new Three(username,password);
         Treelogindao treelogindao = new Treelogindao();
+        int number = 0;
+        int num = 0;
         try {
-            con = Link.getCon();
+
+            num = treelogindao.check(username);
             JSONObject result = new JSONObject();
-            int delNums = treelogindao.threedelete(con,deiLds);
-            if(delNums>0){
-                result.put("success","true");
-                result.put("delNums",delNums);
+            if(num>0){
+                result.put("error", "true");
+                result.put("error","该用户名已存在");
             }
             else {
-                result.put("errorMag","删除失败");
+                number = treelogindao.addthree(three);
+                if (number > 0) {
+                    result.put("success", "true");
+                } else {
+                    result.put("success", "true");
+                    result.put("error", "添加失败");
+                }
             }
             Responsutil.write(response,result);
         } catch (Exception e) {

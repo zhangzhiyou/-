@@ -79,4 +79,14 @@
         <servlet-name>Three</servlet-name>
         <url-pattern>/manageUser/three_paging</url-pattern>
     </servlet-mapping>
+
+    <!--添加教师管理用户-->
+    <servlet>
+        <servlet-name>addthree</servlet-name>
+        <servlet-class>deleteNotes.ThreeAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addthree</servlet-name>
+        <url-pattern>/manageUser/addThree</url-pattern>
+    </servlet-mapping>
 </web-app>

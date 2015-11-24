@@ -55,11 +55,41 @@ public class Treelogindao {
     }
 
     /***
-     * 删除审核用户
+     * 删除教室管理员用户
      * */
         public int threedelete(Connection con , String deiLds) throws Exception {
             String sql = "delete from three where id in("+deiLds+")";
             PreparedStatement premt = con.prepareStatement(sql);
             return premt.executeUpdate();
         }
- }
+
+
+    /**
+     * 添加前先看看是否已经有该用户户
+     * */
+
+    public int check(String username) throws Exception {
+        int num = 0;
+        String sql = "select * from three where name1="+username;
+        Connection con = Link.getCon();
+        PreparedStatement premt = con.prepareStatement(sql);
+        ResultSet rs = premt.executeQuery();
+        if(rs.next()){
+            num++;
+        }
+        return num;
+    }
+
+    /**
+     * 添加添加教室管理员用户
+     * */
+    public int addthree(Three three) throws Exception {
+        String sql = "insert into three values(null,?,?)";
+        Connection con = Link.getCon();
+        PreparedStatement premt = con.prepareStatement(sql);
+        premt.setString(1, three.getUsername2());
+        premt.setString(2, three.getPassword2());
+
+        return premt.executeUpdate();//返回值是int类型
+    }
+  }

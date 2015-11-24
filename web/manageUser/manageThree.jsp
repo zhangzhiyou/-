@@ -19,7 +19,14 @@
 
 
   <script type="text/javascript">
+   /**
+    * 删除数据
+    * */
     $(document).ready(function(){
+      var url;
+      /**
+       * 删除数据
+       * */
       $("#delete").click(function(){
         var selectRows = $("#dg").datagrid('getSelections');//获取表格中checkbox中id的值并且存放到数组中
         if(selectRows.length==0){
@@ -44,10 +51,50 @@
             },"json")//如果没有最后'json'格式会给出"删除失败的提示"
           }
         })
-      })
+      });
 
-
-
+      /**
+       * 添加用户
+       * */
+      $("#adddata").click(function(){
+        $("#dlg").dialog("open").dialog("setTitle","添加用户");
+        url="addThree";
+      });
+      $("#close").click(function(){
+        $("#dlg").dialog("close");
+        clea();
+      });
+      $("#save").click(function(){
+        $("#fm").form("submit",{
+          url:url,
+          onSubmit:function(){
+            //this指的是提交的form表单
+            return $(this).form("validate");//当form表单提交是会调用validate方验证一下所填内容是否为空，
+          },
+          success:function(result){
+            if(result.error){
+              $.messager.alert("系统信息","保存失败");
+              $("#dg").datagrid("reload");
+              return;
+            }
+            if(result.error){
+              $.messager.alert("系统信息","该用户名已经存在");
+              $("#dg").datagrid("reload");
+              return;
+            }
+            if(result.success){
+              $.messager.alert("系统信息","保存成功");
+              clea();
+              $("#dlg").dialog("close");
+              $("#dg").datagrid("reload");
+            }
+          }
+        })
+      });
+      function clea(){
+        $("#username").val("");
+        $("#password").val("");
+      }
     })
   </script>
 
@@ -55,8 +102,24 @@
     .three{
       width: 100%;
     }
-
+    /*.t-from{*/
+      /*margin:0 auto;*/
+      /*width: 250px;*/
+      /*height: 100px;*/
+    /*}*/
+   .t-from span{
+      width: 30%;
+      font-size: 20px;
+      height:30px;
+    }
+   .t-from input{
+      width: 70%;
+      height: 30px;
+      border-radius: 5px;
+      font-size:20px;
+    }
   </style>
+
 </head>
 <body>
   <div class="three">
@@ -74,6 +137,30 @@
       </table>
     </div>
     <div class="t-submit">
+        <div id="dlg" class="easyui-dialog" style="width:400px;height:300px;padding:10px 20px;"
+             closed="true" buttons="#dlg-button">
+          <form id="fm" method="post">
+            <div class="t-from">
+              <p>
+              <span>
+                用户名:
+              </span>
+                  <input type="text" name="username" id="username" class="easyui-validatebox" required="true">
+              </p>
+
+              <p>
+            <span>
+              密 &nbsp;&nbsp; 码:
+            </span>
+                <input type="text" name="password" id="password" class="easyui-validatebox" required="true">
+              </p>
+            </div>
+          </form>
+        </div>
+        <div id="dlg-button">
+          <a href="javascript:gradeSave" class="easyui-linkbutton" id="save" iconCls="icon-ok">保存</a>
+          <a href="javascript:gradeclose()" id="close" class="easyui-linkbutton" iconCls="icon-cancel">关闭</a>
+        </div>
       <table id="table3">
         <tr>
           <td width="65%"></td>

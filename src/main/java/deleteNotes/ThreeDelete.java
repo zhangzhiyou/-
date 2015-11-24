@@ -35,7 +35,7 @@ public class ThreeDelete extends HttpServlet {
                 result.put("delNums",delNums);
             }
             else {
-                result.put("errorMag","产出失败");
+                result.put("errorMag","删除失败");
             }
             Responsutil.write(response,result);
         } catch (Exception e) {
