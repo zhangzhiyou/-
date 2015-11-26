@@ -23,7 +23,6 @@
     * 删除数据
     * */
     $(document).ready(function(){
-      var url;
       /**
        * 删除数据
        * */
@@ -41,6 +40,7 @@
         $.messager.confirm("系统提示","你确定要删除<font color='red'>"+selectRows.length+"<font>条数据",function(r){
           if(r){
             $.post("threedelect",{deiLds:ids},function(result){
+                alert(result.delNums+"33331111");
               if(result.success){
                 $.messager.alert("系统提示","你以成功删除<font color='red'>"+result.delNums+"<font>条数据");
                 $("#dg").datagrid("reload");//删除后重新刷新表
@@ -52,50 +52,54 @@
           }
         })
       });
-
+    });
       /**
        * 添加用户
        * */
-      $("#adddata").click(function(){
+       $(document).ready(function(){
+        var url;
+       $("#adddata").click(function(){
         $("#dlg").dialog("open").dialog("setTitle","添加用户");
         url="addThree";
       });
       $("#close").click(function(){
         $("#dlg").dialog("close");
-        clea();
+        clear();
       });
       $("#save").click(function(){
         $("#fm").form("submit",{
           url:url,
           onSubmit:function(){
-            //this指的是提交的form表单
-            return $(this).form("validate");//当form表单提交是会调用validate方验证一下所填内容是否为空，
+            return $(this).form("validate");
           },
           success:function(result){
-            if(result.error){
-              $.messager.alert("系统信息","保存失败");
-              $("#dg").datagrid("reload");
-              return;
-            }
-            if(result.error){
-              $.messager.alert("系统信息","该用户名已经存在");
-              $("#dg").datagrid("reload");
-              return;
-            }
-            if(result.success){
-              $.messager.alert("系统信息","保存成功");
-              clea();
-              $("#dlg").dialog("close");
-              $("#dg").datagrid("reload");
-            }
-          }
-        })
+              var obj = jQuery.parseJSON(result);
+
+              if(obj.errormag==1) {
+                  $.messager.alert("系统信息", "该用户名已经存在");
+                  clear();
+                  $("#dlg").dialog("close");
+                  $("#dg").datagrid("reload");//todo 刷新表中数据
+              }
+              if(obj.errormag==2){
+                  $.messager.alert("系统信息","保存成功");
+                  clear();
+                  $("#dlg").dialog("close");
+                  $("#dg").datagrid("reload");//todo 刷新表中数据
+              }
+              if(obj.errormag==3){
+                  $.messager.alert("系统提示","保存失败");
+                  clear();
+                  $("#dlg").dialog("close");
+              }
+              }
+        },"json")
       });
-      function clea(){
+      function clear(){
         $("#username").val("");
         $("#password").val("");
       }
-    })
+      })
   </script>
 
   <style type="text/css">

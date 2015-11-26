@@ -70,7 +70,7 @@ public class Treelogindao {
 
     public int check(String username) throws Exception {
         int num = 0;
-        String sql = "select * from three where name1="+username;
+        String sql = "select * from three where name1='"+username+"'";
         Connection con = Link.getCon();
         PreparedStatement premt = con.prepareStatement(sql);
         ResultSet rs = premt.executeQuery();

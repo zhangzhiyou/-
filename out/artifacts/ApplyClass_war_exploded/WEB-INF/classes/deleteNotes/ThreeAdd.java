@@ -2,6 +2,7 @@ package deleteNotes;
 
 import Dao.Treelogindao;
 import Paging.Responsutil;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import model.Three;
 import net.sf.json.JSONObject;
 
@@ -24,6 +25,7 @@ public class ThreeAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        String username = request.getParameter("username");
         String password = request.getParameter("password");
+        System.out.println("username= "+username);
         Three three = new Three(username,password);
         Treelogindao treelogindao = new Treelogindao();
         int number = 0;
@@ -31,23 +33,24 @@ public class ThreeAdd extends HttpServlet {
         try {
 
             num = treelogindao.check(username);
-            JSONObject result = new JSONObject();
+           JSONObject result = new JSONObject();
             if(num>0){
-                result.put("error", "true");
-                result.put("error","该用户名已存在");
+                result.put("errormag",1);
             }
-            else {
+            else{
                 number = treelogindao.addthree(three);
-                if (number > 0) {
-                    result.put("success", "true");
-                } else {
-                    result.put("success", "true");
-                    result.put("error", "添加失败");
+                if(number>0){
+                    result.put("errormag",2);
                 }
+                else {
+                    result.put("errormag",3);
+                }
+
             }
             Responsutil.write(response,result);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }
